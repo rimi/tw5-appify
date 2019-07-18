@@ -1,0 +1,8 @@
+created: 20190315145243786
+modified: 20190320181148492
+tags: 
+title: $:/plugins/rimi/appify/macros/bootstrap
+type: text/vnd.tiddlywiki
+
+\define activeApp() {{$:/global-appify-config!!active-app}}
+\define activeAppConfig() $:/appify-configs/<<activeApp>>

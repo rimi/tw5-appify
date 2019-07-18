@@ -1,0 +1,19 @@
+created: 20190315165927652
+modified: 20190316144801326
+tags: 
+title: $:/plugins/rimi/appify/ActiveComponentRenderer
+type: text/vnd.tiddlywiki
+
+<$reveal type="match" state="$:/state/appify/app/dev-mode" text="on">
+<<editComponentButton>>
+</$reveal>
+
+<$list filter="[<appify.styleTitle>is[tiddler]]">
+<style>
+<$view/>
+</style>
+</$list>
+
+<$tiddler tiddler=<<appify.viewTitle>>>
+{{}}
+</$tiddler>

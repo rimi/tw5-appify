@@ -1,0 +1,10 @@
+caption: Tiddler
+created: 20190320174958533
+modified: 20190320175135708
+tags: 
+title: $:/plugins/rimi/appify/templates/edit-template-tiddler
+type: text/vnd.tiddlywiki
+
+<$tiddler tiddler=<<templateTiddler>>>
+{{||$:/plugins/rimi/appify/templates/edit-current-tiddler}}
+</$tiddler> 

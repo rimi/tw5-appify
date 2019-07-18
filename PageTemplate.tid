@@ -1,0 +1,35 @@
+created: 20190311204408809
+modified: 20190320182339591
+tags: 
+title: $:/plugins/rimi/appify/PageTemplate
+type: text/vnd.tiddlywiki
+
+\import [[$:/plugins/rimi/appify/macros]] [all[shadows+tiddlers]tag[$:/tags/Macro]!has[draft.of]]
+
+<$wikify name="appify.activeAppName" text="""<$importvariables filter="[[$:/plugins/rimi/appify/macros/bootstrap]]"><<activeApp>></$importvariables>""">
+<$wikify name="appify.activeConfig" text="""<$importvariables filter="[[$:/plugins/rimi/appify/macros/bootstrap]]"><<activeAppConfig>></$importvariables>""">
+<$wikify name="appify.activeThemeName" text="""<$view tiddler=<<appify.activeConfig>> field="theme"/>""">
+<$wikify name="appify.availableThemes" text="""<$view tiddler=<<appify.activeConfig>> field="themes-available"/>""">
+<$wikify name="appify.activeStyleName" text="""<$view tiddler=<<appify.activeConfig>> field="style"/>""">
+<$wikify name="appify.availableStyles" text="""<$view tiddler=<<appify.activeConfig>> field="styles-available"/>""">
+<$wikify name="appify.activeLangName" text="""<$view tiddler=<<appify.activeConfig>> field="lang"/>""">
+<$wikify name="appify.availableLangs" text="""<$view tiddler=<<appify.activeConfig>> field="langs-available"/>""">
+<$wikify name="appify.activeEditMode" text="""<$view tiddler=<<appify.activeConfig>> field="edit-mode"/>""">
+<$wikify name="appify.viewTitle" text=<<themeViewTitle>>>
+<$wikify name="appify.styleTitle" text=<<styleTitle>>>
+<$wikify name="appify.macroTitle" text=<<macroTitle>>>
+
+<<editAppifyConfig>>{{||$:/plugins/rimi/appify/ActiveComponentRenderer}}
+
+</$wikify>
+</$wikify>
+</$wikify>
+</$wikify>
+</$wikify>
+</$wikify>
+</$wikify>
+</$wikify>
+</$wikify>
+</$wikify>
+</$wikify>
+</$wikify>

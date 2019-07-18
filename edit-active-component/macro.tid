@@ -1,0 +1,11 @@
+caption: Macros
+created: 20190310111004851
+modified: 20190320180438944
+title: $:/plugins/rimi/appify/edit-active-component/macro
+type: text/vnd.tiddlywiki
+
+<<editTemplateButton "$:/plugins/rimi/appify/edit-active-component/macro">>
+
+<$tiddler tiddler=<<appify.macroTitle>>>
+{{||$:/plugins/rimi/appify/templates/edit-current-tiddler}}
+</$tiddler>

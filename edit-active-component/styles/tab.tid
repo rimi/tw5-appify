@@ -1,0 +1,10 @@
+created: 20190310115853994
+modified: 20190320180524709
+title: $:/plugins/rimi/appify/edit-active-component/styles/tab
+type: text/vnd.tiddlywiki
+
+<<editTemplateButton "$:/plugins/rimi/appify/edit-active-component/styles/tab">>
+
+<$tiddler tiddler=<<currentTab>>>
+{{||$:/plugins/rimi/appify/templates/edit-current-tiddler}}
+</$tiddler>

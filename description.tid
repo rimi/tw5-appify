@@ -1,0 +1,29 @@
+created: 20190316142812279
+modified: 20190320182027249
+tags: 
+title: $:/plugins/rimi/appify/description
+type: text/vnd.tiddlywiki
+
+* [[Template for rendering components|$:/plugins/rimi/appify/ActiveComponentRenderer]]
+* defined variables:
+** ''appify.activeAppName'' the currently active app (e.g. //atr//)
+** ''appify.activeConfig'' the currently active config (e.g. // $:/appify-configs/atr //)
+** ''appify.activeThemeName'' the currently active theme (e.g. //default//)
+** ''appify.availableThemes''
+** ''appify.activeStyleName'' the currently active style (e.g. //dark//)
+** ''appify.availableStyles''
+** ''appify.activeLangName'' the currently active language (e.g. //de//)
+** ''appify.availableLangs''
+** ''appify.activeEditMode'' the currently active edit-mode (e.g. //tm-open-window//)
+** ''appify.viewTitle'' the name of the active VIEW-tiddler
+** ''appify.styleTitle'' the name of the active STYLE-tiddler
+** ''appify.macroTitle'' the name of the active MACRO-tiddler
+* DEV Modes:
+** [[App-Level|$:/state/appify/app/dev-mode]] (currently ''{{$:/state/appify/app/dev-mode}}'')
+** [[Framework-Level|$:/state/appify/framework/dev-mode]] (currently ''{{$:/state/appify/framework/dev-mode}}'')
+
+!! Current Configuration
+
+<$tiddler tiddler=<<appify.activeConfig>>>
+<$transclude tiddler=<<appify.activeConfig>> mode="block"/>
+</$tiddler>

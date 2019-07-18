@@ -1,0 +1,9 @@
+caption: Styles
+created: 20190310110940322
+modified: 20190320180505885
+title: $:/plugins/rimi/appify/edit-active-component/styles
+type: text/vnd.tiddlywiki
+
+<<editTemplateButton "$:/plugins/rimi/appify/edit-active-component/styles">>
+
+<<tabs tabsList:"[enlist<appify.availableStyles>addprefix[/]addprefix<appify.viewTitle>addsuffix[-style]]" default:"[enlist<appify.availableStyles>addprefix[/]addprefix<appify.viewTitle>addsuffix[-style]first[]]" state:"$:/state/appify/component-style-editor-tabs" template:"$:/plugins/rimi/appify/edit-active-component/styles/tab">>

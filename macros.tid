@@ -1,0 +1,61 @@
+created: 20190310072223522
+modified: 20190320191524961
+title: $:/plugins/rimi/appify/macros
+type: text/vnd.tiddlywiki
+
+\define themeViewTitle(appName, themeName) $:/<<resolveAppName "$appName$">>/themes/<<resolveThemeName "$themeName$">>
+
+\define sectionViewTitle(id, appName:"") $:/<<resolveAppName "$appName$">>/ui/sections/$id$
+
+\define styleTitle(viewTitle, styleName:"") <<resolveViewTitle "$viewTitle$">>/<<resolveStyleName "$styleName$">>-style
+
+\define macroTitle(viewTitle) <<resolveViewTitle "$viewTitle$">>/macro
+
+\define resolveViewTitle(viewTitle) <$reveal text="$viewTitle$" default="" type="match"><<appify.viewTitle>></$reveal><$reveal text="$viewTitle$" default="" type="nomatch">$viewTitle$</$reveal>
+
+\define resolveAppName(appName) <$reveal text="$appName$" default="" type="match"><<appify.activeAppName>></$reveal><$reveal text="$appName$" default="" type="nomatch">$appName$</$reveal>
+
+\define resolveThemeName(themeName) <$reveal text="$themeName$" default="" type="match"><<appify.activeThemeName>></$reveal><$reveal text="$themeName$" default="" type="nomatch">$themeName$</$reveal>
+
+\define resolveStyleName(styleName) <$reveal text="$styleName$" default="" type="match"><<appify.activeStyleName>></$reveal><$reveal text="$styleName$" default="" type="nomatch">$styleName$</$reveal>
+
+\define sectionId(id) <<resolveAppName>>-sec-$id$
+
+\define renderSection(id)
+<$wikify name="mySectionId" text=<<sectionId "$id$">>>
+<div id=<<mySectionId>>><$wikify name="currentTiddler" text=<<sectionViewTitle "$id$">>><$set name="appify.viewTitle" value=<<currentTiddler>>><$wikify name="appify.styleTitle" text=<<styleTitle>>><$wikify name="appify.macroTitle" text=<<macroTitle>>><$macrocall $name="editSectionButton" sectionId="$id$"/>{{||$:/plugins/rimi/appify/ActiveComponentRenderer}}</$wikify></$wikify></$set></$wikify></div>
+</$wikify>
+\end
+
+\define editComponentButton()
+
+<$button tooltip="Edit Content">
+<$action-sendmessage $message=<<appify.activeEditMode>> $param="$:/plugins/rimi/appify/edit-active-component" appify.viewTitle=<<appify.viewTitle>> appify.styleTitle=<<appify.styleTitle>> appify.availableStyles=<<appify.availableStyles>> appify.macroTitle=<<appify.macroTitle>> appify.activeEditMode=<<appify.activeEditMode>>/>
+{{$:/core/images/edit-button}}
+</$button>
+
+\end
+
+\define editCurrentTemplateButton(tooltip:"") <$macrocall $name="editTemplateButton" templateTiddler=<<currentTiddler>> tooltip="$tooltip$"/>
+
+\define editTemplateButton(templateTiddler, tooltip:"")
+
+<$reveal type="match" state="$:/state/appify/framework/dev-mode" text="on">
+<$button tooltip="$tooltip$">
+<$action-sendmessage $message=<<appify.activeEditMode>> $param="$:/plugins/rimi/appify/templates/edit-template-tiddler" templateTiddler="$templateTiddler$"/>
+{{$:/core/images/storyview-classic}}
+</$button>
+</$reveal>
+
+\end
+
+\define editAppifyConfig()
+
+<$reveal type="match" state="$:/state/appify/framework/dev-mode" text="on">
+<$button tooltip="Configure Appify">
+<$action-sendmessage $message=<<appify.activeEditMode>>} $param="$:/plugins/rimi/appify/description" appify.activeConfig=<<appify.activeConfig>>/>
+{{$:/core/images/options-button}}
+</$button>
+</$reveal>
+
+\end

@@ -1,0 +1,17 @@
+caption: Tiddler
+created: 20190310120435142
+modified: 20190320174502393
+tags: 
+title: $:/plugins/rimi/appify/templates/edit-current-tiddler
+type: text/vnd.tiddlywiki
+
+<$list filter="[<currentTiddler>is[tiddler]]">
+Tiddler already exists!
+</$list>
+<$list filter="[<currentTiddler>!is[tiddler]]">
+Tiddler DOES NOT exist!
+</$list>
+
+<$link to=<<currentTiddler>>>Open Tiddler</$link><br/>
+
+<$edit-text tiddler=<<currentTiddler>> field="text" class="simple-edit-textarea"/>
