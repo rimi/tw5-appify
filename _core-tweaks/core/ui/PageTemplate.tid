@@ -28,15 +28,14 @@ tc-page-container tc-page-view-$(storyviewTitle)$ tc-language-$(languageTitle)$
 
 <$navigator story="$:/StoryList" history="$:/HistoryList" openLinkFromInsideRiver={{$:/config/Navigation/openLinkFromInsideRiver}} openLinkFromOutsideRiver={{$:/config/Navigation/openLinkFromOutsideRiver}} relinkOnRename={{$:/config/RelinkOnRename}}>
 
-<$dropzone>
-
-<$list filter="[all[shadows+tiddlers]tag[$:/tags/PageTemplate]!has[draft.of]]" variable="listItem">
-
-<$transclude tiddler=<<listItem>>/>
-
+<$list filter="[[$:/core/ui/PageTemplate]has[page-template]]">
+<$tiddler tiddler={{$:/core/ui/PageTemplate!!page-template}}>
+<$transclude tiddler={{$:/core/ui/PageTemplate!!page-template}}/>
+</$tiddler>
 </$list>
-
-</$dropzone>
+<$list filter="[[$:/core/ui/PageTemplate]!has[page-template]]">
+<$transclude tiddler="$:/core/ui/DefaultPageTemplate"/>
+</$list>
 
 </$navigator>
 
