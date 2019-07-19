@@ -1,10 +1,10 @@
 created: 20190315165927652
-modified: 20190316144801326
+modified: 20190719123230221
 tags: 
 title: $:/plugins/rimi/appify/ActiveComponentRenderer
 type: text/vnd.tiddlywiki
 
-<$reveal type="match" state="$:/state/appify/app/dev-mode" text="on">
+<$reveal type="match" state="$:/state/rimi/dev-mode" text="on">
 <<editComponentButton>>
 </$reveal>
 
