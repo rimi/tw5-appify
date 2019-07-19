@@ -1,5 +1,5 @@
 created: 20190316142812279
-modified: 20190320182027249
+modified: 20190719163444034
 tags: 
 title: $:/plugins/rimi/appify/description
 type: text/vnd.tiddlywiki
@@ -19,8 +19,7 @@ type: text/vnd.tiddlywiki
 ** ''appify.styleTitle'' the name of the active STYLE-tiddler
 ** ''appify.macroTitle'' the name of the active MACRO-tiddler
 * DEV Modes:
-** [[App-Level|$:/state/appify/app/dev-mode]] (currently ''{{$:/state/appify/app/dev-mode}}'')
-** [[Framework-Level|$:/state/appify/framework/dev-mode]] (currently ''{{$:/state/appify/framework/dev-mode}}'')
+** [[App-Level|$:/state/rimi/dev-mode]] (currently ''{{$:/state/rimi/dev-mode}}'')
 
 !! Current Configuration
 

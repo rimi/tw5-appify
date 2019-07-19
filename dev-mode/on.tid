@@ -1,9 +1,0 @@
-created: 20190308125936933
-key: ctrl-1
-modified: 20190313170845556
-tags: $:/tags/KeyboardShortcut
-title: $:/plugins/rimi/appify/dev-mode/on
-type: text/vnd.tiddlywiki
-
-<$action-setfield $tiddler="$:/state/appify/framework/dev-mode" text="on"/>
-<$action-setfield $tiddler="$:/state/appify/app/dev-mode" text="on"/>

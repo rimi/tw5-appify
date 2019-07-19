@@ -1,5 +1,6 @@
 created: 20190310072223522
-modified: 20190320191524961
+modified: 20190719164135227
+tags: 
 title: $:/plugins/rimi/appify/macros
 type: text/vnd.tiddlywiki
 
@@ -31,7 +32,7 @@ type: text/vnd.tiddlywiki
 
 <$button tooltip="Edit Content">
 <$action-sendmessage $message=<<appify.activeEditMode>> $param="$:/plugins/rimi/appify/edit-active-component" appify.viewTitle=<<appify.viewTitle>> appify.styleTitle=<<appify.styleTitle>> appify.availableStyles=<<appify.availableStyles>> appify.macroTitle=<<appify.macroTitle>> appify.activeEditMode=<<appify.activeEditMode>>/>
-{{$:/core/images/edit-button}}
+{{$:/core/images/options-button}}
 </$button>
 
 \end
@@ -40,7 +41,7 @@ type: text/vnd.tiddlywiki
 
 \define editTemplateButton(templateTiddler, tooltip:"")
 
-<$reveal type="match" state="$:/state/appify/framework/dev-mode" text="on">
+<$reveal type="match" state="$:/state/rimi/dev-mode" text="on">
 <$button tooltip="$tooltip$">
 <$action-sendmessage $message=<<appify.activeEditMode>> $param="$:/plugins/rimi/appify/templates/edit-template-tiddler" templateTiddler="$templateTiddler$"/>
 {{$:/core/images/storyview-classic}}
@@ -49,12 +50,25 @@ type: text/vnd.tiddlywiki
 
 \end
 
+\define editCurrent(tooltip:"")
+
+<$reveal type="match" state="$:/state/rimi/dev-mode" text="on">
+<$button tooltip="$tooltip$">
+<$action-sendmessage $message=<<appify.activeEditMode>> $param=<<currentTiddler>> templateTiddler="$:/plugins/rimi/appify/templates/edit-current-tiddler"/>
+{{$:/core/images/edit-button}}
+</$button>
+</$reveal>
+
+\end
+
+
+
 \define editAppifyConfig()
 
 <$reveal type="match" state="$:/state/appify/framework/dev-mode" text="on">
 <$button tooltip="Configure Appify">
 <$action-sendmessage $message=<<appify.activeEditMode>>} $param="$:/plugins/rimi/appify/description" appify.activeConfig=<<appify.activeConfig>>/>
-{{$:/core/images/options-button}}
+{{$:/core/images/star-filled}}
 </$button>
 </$reveal>
 
