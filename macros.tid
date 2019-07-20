@@ -1,5 +1,5 @@
 created: 20190310072223522
-modified: 20190719164135227
+modified: 20190720123134114
 tags: 
 title: $:/plugins/rimi/appify/macros
 type: text/vnd.tiddlywiki
@@ -54,18 +54,16 @@ type: text/vnd.tiddlywiki
 
 <$reveal type="match" state="$:/state/rimi/dev-mode" text="on">
 <$button tooltip="$tooltip$">
-<$action-sendmessage $message=<<appify.activeEditMode>> $param=<<currentTiddler>> templateTiddler="$:/plugins/rimi/appify/templates/edit-current-tiddler"/>
+<$action-sendmessage $message=<<appify.activeEditMode>> $param="$:/plugins/rimi/appify/templates/edit-template-tiddler" templateTiddler=<<currentTiddler>>/>
 {{$:/core/images/edit-button}}
 </$button>
 </$reveal>
 
 \end
 
-
-
 \define editAppifyConfig()
 
-<$reveal type="match" state="$:/state/appify/framework/dev-mode" text="on">
+<$reveal type="match" state="$:/state/rimi/dev-mode" text="on">
 <$button tooltip="Configure Appify">
 <$action-sendmessage $message=<<appify.activeEditMode>>} $param="$:/plugins/rimi/appify/description" appify.activeConfig=<<appify.activeConfig>>/>
 {{$:/core/images/star-filled}}
