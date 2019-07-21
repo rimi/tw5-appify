@@ -1,24 +1,28 @@
 created: 20190310072223522
-modified: 20190720123134114
-tags: 
+modified: 20190721123405030
 title: $:/plugins/rimi/appify/macros
 type: text/vnd.tiddlywiki
 
-\define themeViewTitle(appName, themeName) $:/<<resolveAppName "$appName$">>/themes/<<resolveThemeName "$themeName$">>
-
-\define sectionViewTitle(id, appName:"") $:/<<resolveAppName "$appName$">>/ui/sections/$id$
-
-\define styleTitle(viewTitle, styleName:"") <<resolveViewTitle "$viewTitle$">>/<<resolveStyleName "$styleName$">>-style
-
-\define macroTitle(viewTitle) <<resolveViewTitle "$viewTitle$">>/macro
-
-\define resolveViewTitle(viewTitle) <$reveal text="$viewTitle$" default="" type="match"><<appify.viewTitle>></$reveal><$reveal text="$viewTitle$" default="" type="nomatch">$viewTitle$</$reveal>
+\define appifyTitlesBasePrefix() $:/appify/apps/
 
 \define resolveAppName(appName) <$reveal text="$appName$" default="" type="match"><<appify.activeAppName>></$reveal><$reveal text="$appName$" default="" type="nomatch">$appName$</$reveal>
 
 \define resolveThemeName(themeName) <$reveal text="$themeName$" default="" type="match"><<appify.activeThemeName>></$reveal><$reveal text="$themeName$" default="" type="nomatch">$themeName$</$reveal>
 
 \define resolveStyleName(styleName) <$reveal text="$styleName$" default="" type="match"><<appify.activeStyleName>></$reveal><$reveal text="$styleName$" default="" type="nomatch">$styleName$</$reveal>
+
+\define resolveLangName(langName) <$reveal text="$langName$" default="" type="match"><<appify.activeLangName>></$reveal><$reveal text="$langName$" default="" type="nomatch">$langName$</$reveal>
+
+\define resolveViewTitle(viewTitle) <$reveal text="$viewTitle$" default="" type="match"><<appify.viewTitle>></$reveal><$reveal text="$viewTitle$" default="" type="nomatch">$viewTitle$</$reveal>
+
+\define themeViewTitle(appName, themeName) <<appifyTitlesBasePrefix>><<resolveAppName "$appName$">>/themes/<<resolveLangName>>/<<resolveThemeName "$themeName$">>
+
+\define sectionViewTitle(id, appName:"") <<appifyTitlesBasePrefix>><<resolveAppName "$appName$">>/sections/<<resolveLangName>>/$id$
+
+\define styleTitle(viewTitle, styleName:"") <<resolveViewTitle "$viewTitle$">>/styles/<<resolveStyleName "$styleName$">>
+
+\define macroTitle(viewTitle) <<resolveViewTitle "$viewTitle$">>/macro
+
 
 \define sectionId(id) <<resolveAppName>>-sec-$id$
 
@@ -41,7 +45,7 @@ type: text/vnd.tiddlywiki
 
 \define editTemplateButton(templateTiddler, tooltip:"")
 
-<$reveal type="match" state="$:/state/rimi/dev-mode" text="on">
+<$reveal type="match" state="$:/state/rimi/dev-mode" text="on" default="off">
 <$button tooltip="$tooltip$">
 <$action-sendmessage $message=<<appify.activeEditMode>> $param="$:/plugins/rimi/appify/templates/edit-template-tiddler" templateTiddler="$templateTiddler$"/>
 {{$:/core/images/storyview-classic}}
@@ -52,7 +56,7 @@ type: text/vnd.tiddlywiki
 
 \define editCurrent(tooltip:"")
 
-<$reveal type="match" state="$:/state/rimi/dev-mode" text="on">
+<$reveal type="match" state="$:/state/rimi/dev-mode" text="on" default="off">
 <$button tooltip="$tooltip$">
 <$action-sendmessage $message=<<appify.activeEditMode>> $param="$:/plugins/rimi/appify/templates/edit-template-tiddler" templateTiddler=<<currentTiddler>>/>
 {{$:/core/images/edit-button}}
@@ -63,7 +67,7 @@ type: text/vnd.tiddlywiki
 
 \define editAppifyConfig()
 
-<$reveal type="match" state="$:/state/rimi/dev-mode" text="on">
+<$reveal type="match" state="$:/state/rimi/dev-mode" text="on" default="off">
 <$button tooltip="Configure Appify">
 <$action-sendmessage $message=<<appify.activeEditMode>>} $param="$:/plugins/rimi/appify/description" appify.activeConfig=<<appify.activeConfig>>/>
 {{$:/core/images/star-filled}}

@@ -1,8 +1,11 @@
 created: 20190315145243786
-modified: 20190320181148492
+modified: 20190721120611749
 tags: 
 title: $:/plugins/rimi/appify/macros/bootstrap
 type: text/vnd.tiddlywiki
 
-\define activeApp() {{$:/global-appify-config!!active-app}}
-\define activeAppConfig() $:/appify-configs/<<activeApp>>
+\define activeApp() {{$:/appify/current-active-app!!appify.active-app}}
+\define activeAppConfig() <$wikify name="my-active-app" text="""<<activeApp>>"""><$list filter="[tag[appify:config]field:appify.app-prefix<my-active-app>]"/></$wikify>
+
+Active App: <<activeApp>><br/>
+Active App Config: <<activeAppConfig>>

@@ -1,7 +1,8 @@
 created: 20190718072756378
-modified: 20190719164819673
+modified: 20190721124451833
 tags: 
 title: $:/core/ui/PageTemplate
+type: text/vnd.tiddlywiki
 
 \define containerClasses()
 tc-page-container tc-page-view-$(storyviewTitle)$ tc-language-$(languageTitle)$
