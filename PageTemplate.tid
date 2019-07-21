@@ -1,5 +1,5 @@
 created: 20190311204408809
-modified: 20190721124433295
+modified: 20190721152122081
 tags: 
 title: $:/plugins/rimi/appify/PageTemplate
 type: text/vnd.tiddlywiki
@@ -15,34 +15,20 @@ type: text/vnd.tiddlywiki
 <$wikify name="appify.activeLangName" text="""<$view tiddler=<<appify.activeConfig>> field="appify.lang"/>""">
 <$wikify name="appify.availableLangs" text="""<$view tiddler=<<appify.activeConfig>> field="appify.lang.available"/>""">
 <$wikify name="appify.activeEditMode" text="""<$view tiddler=<<appify.activeConfig>> field="appify.edit-mode"/>""">
+<$wikify name="appify.sectionFolder" text=<<themeFolder>>>
 <$wikify name="appify.viewTitle" text=<<themeViewTitle>>>
 <$wikify name="appify.styleTitle" text=<<styleTitle>>>
 <$wikify name="appify.macroTitle" text=<<macroTitle>>>
-
-<$reveal type="match" state="$:/state/rimi/dev-mode" text="on" default="off">
-
-<$details summary="Page-Environment">
-
-|!Variable|!Value|!Description|
-|appify.activeAppName|<<appify.activeAppName>>|The currently active App|
-|appify.activeConfig|<<appify.activeConfig>>|The currently active Configuration|
-|appify.activeThemeName|<<appify.activeThemeName>>|The currently active Theme|
-|appify.availableThemes|<<appify.availableThemes>>|The currently available Themes|
-|appify.activeStyleName|<<appify.activeStyleName>>|The currently active Style|
-|appify.availableStyles|<<appify.availableStyles>>|The currently available Styles|
-|appify.activeLangName|<<appify.activeLangName>>|The currently active Language|
-|appify.availableLangs|<<appify.availableLangs>>|The currently available Languages|
-|appify.activeEditMode|<<appify.activeEditMode>>|The currently active Edit-Mode|
-|appify.viewTitle|<<appify.viewTitle>>|Themes View|
-|appify.styleTitle|<<appify.styleTitle>>|Themes Style|
-|appify.macroTitle|<<appify.macroTitle>>|Themes Macro|
-
-</$details>
-
-</$reveal>
+<$set name="appify.componentType" value="page">
+<$wikify name="appify.divId" text="""<<appify.activeAppName>>-wrapper""">
+<div id=<<appify.divId>>>
 
 <<editAppifyConfig>>{{||$:/plugins/rimi/appify/ActiveComponentRenderer}}
 
+</div>
+</$wikify>
+</$set>
+</$wikify>
 </$wikify>
 </$wikify>
 </$wikify>

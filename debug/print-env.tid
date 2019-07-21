@@ -1,0 +1,25 @@
+created: 20190721125405068
+modified: 20190721151230172
+tags: 
+title: $:/plugins/rimi/appify/debug/print-env
+type: text/vnd.tiddlywiki
+
+|!Variable|!Value|!Description|
+|appify.activeAppName|<<appify.activeAppName>>|The currently active App|
+|appify.activeConfig|<<appify.activeConfig>>|The currently active Configuration|
+|appify.sectionId|<<appify.sectionId>>|The current sections id|
+|appify.sectionFolder|<<appify.sectionFolder>>|Folder/Basename to store lang-independent-stuff (styles+macros) in|
+|appify.sectionConfigDynDataFieldName|<<appify.sectionConfigDynDataFieldName>>|The name of the configs field that contains the sections dynamic data|
+|appify.sectionDynData|<<appify.sectionDynData>>|The current sections dynamic-data|
+|appify.activeThemeName|<<appify.activeThemeName>>|The currently active Theme|
+|appify.availableThemes|<<appify.availableThemes>>|The currently available Themes|
+|appify.activeStyleName|<<appify.activeStyleName>>|The currently active Style|
+|appify.availableStyles|<<appify.availableStyles>>|The currently available Styles|
+|appify.activeLangName|<<appify.activeLangName>>|The currently active Language|
+|appify.availableLangs|<<appify.availableLangs>>|The currently available Languages|
+|appify.activeEditMode|<<appify.activeEditMode>>|The currently active Edit-Mode|
+|appify.viewTitle|<<appify.viewTitle>>|Title of current View|
+|appify.styleTitle|<<appify.styleTitle>>|Title of current Style|
+|appify.macroTitle|<<appify.macroTitle>>|Title of current Macro|
+|appify.componentType|<<appify.componentType>>|Type of component (page or section)|
+|appify.divId|<<appify.divId>>|ID of the current's components DIV|

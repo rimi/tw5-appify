@@ -1,5 +1,5 @@
 created: 20190310072223522
-modified: 20190721123405030
+modified: 20190721152206663
 title: $:/plugins/rimi/appify/macros
 type: text/vnd.tiddlywiki
 
@@ -17,19 +17,32 @@ type: text/vnd.tiddlywiki
 
 \define themeViewTitle(appName, themeName) <<appifyTitlesBasePrefix>><<resolveAppName "$appName$">>/themes/<<resolveLangName>>/<<resolveThemeName "$themeName$">>
 
+\define themeFolder(appName, themeName) <<appifyTitlesBasePrefix>><<resolveAppName "$appName$">>/themes/<<resolveThemeName "$themeName$">>
+
 \define sectionViewTitle(id, appName:"") <<appifyTitlesBasePrefix>><<resolveAppName "$appName$">>/sections/<<resolveLangName>>/$id$
 
-\define styleTitle(viewTitle, styleName:"") <<resolveViewTitle "$viewTitle$">>/styles/<<resolveStyleName "$styleName$">>
+\define sectionFolder(id, appName:"") <<appifyTitlesBasePrefix>><<resolveAppName "$appName$">>/sections/$id$
 
-\define macroTitle(viewTitle) <<resolveViewTitle "$viewTitle$">>/macro
+\define styleTitle(viewTitle, styleName:"") <<appify.sectionFolder>>/styles/<<resolveStyleName "$styleName$">>
 
+\define macroTitle(viewTitle) <<appify.sectionFolder>>/macro
 
-\define sectionId(id) <<resolveAppName>>-sec-$id$
+\define sectionId(id) <<resolveAppName>>-section-$id$
 
 \define renderSection(id)
-<$wikify name="mySectionId" text=<<sectionId "$id$">>>
-<div id=<<mySectionId>>><$wikify name="currentTiddler" text=<<sectionViewTitle "$id$">>><$set name="appify.viewTitle" value=<<currentTiddler>>><$wikify name="appify.styleTitle" text=<<styleTitle>>><$wikify name="appify.macroTitle" text=<<macroTitle>>><$macrocall $name="editSectionButton" sectionId="$id$"/>{{||$:/plugins/rimi/appify/ActiveComponentRenderer}}</$wikify></$wikify></$set></$wikify></div>
+<$set name="appify.componentType" value="section">
+<$set name="appify.sectionId" value="$id$">
+<$wikify name="appify.sectionConfigDynDataFieldName" text="""appify.dyn-data.<<appify.sectionId>>""">
+<$wikify name="appify.sectionDynData" text="""<$view tiddler=<<appify.activeConfig>> field=<<appify.sectionConfigDynDataFieldName>>/>""">
+<$wikify name="appify.divId" text=<<sectionId "$id$">>>
+<$wikify name="appify.sectionFolder" text=<<sectionFolder "$id$">>>
+<div id=<<appify.divId>>><$wikify name="currentTiddler" text=<<sectionViewTitle "$id$">>><$set name="appify.viewTitle" value=<<currentTiddler>>><$wikify name="appify.styleTitle" text=<<styleTitle>>><$wikify name="appify.macroTitle" text=<<macroTitle>>><$macrocall $name="editSectionButton" sectionId="$id$"/>{{||$:/plugins/rimi/appify/ActiveComponentRenderer}}</$wikify></$wikify></$set></$wikify></div>
 </$wikify>
+</$wikify>
+</$wikify>
+</$wikify>
+</$set>
+</$set>
 \end
 
 \define editComponentButton()
