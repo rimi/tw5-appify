@@ -1,5 +1,5 @@
 created: 20190315165927652
-modified: 20190721125505133
+modified: 20190722130742987
 tags: 
 title: $:/plugins/rimi/appify/ActiveComponentRenderer
 type: text/vnd.tiddlywiki
@@ -19,6 +19,6 @@ type: text/vnd.tiddlywiki
 </style>
 </$list>
 
-<$tiddler tiddler=<<appify.viewTitle>>>
+<$list filter="[enlist<appify.viewTitles>]">
 {{}}
-</$tiddler>
+</$list>

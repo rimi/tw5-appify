@@ -1,5 +1,5 @@
 created: 20190311204408809
-modified: 20190721152122081
+modified: 20190722130240010
 tags: 
 title: $:/plugins/rimi/appify/PageTemplate
 type: text/vnd.tiddlywiki
@@ -16,19 +16,19 @@ type: text/vnd.tiddlywiki
 <$wikify name="appify.availableLangs" text="""<$view tiddler=<<appify.activeConfig>> field="appify.lang.available"/>""">
 <$wikify name="appify.activeEditMode" text="""<$view tiddler=<<appify.activeConfig>> field="appify.edit-mode"/>""">
 <$wikify name="appify.sectionFolder" text=<<themeFolder>>>
-<$wikify name="appify.viewTitle" text=<<themeViewTitle>>>
 <$wikify name="appify.styleTitle" text=<<styleTitle>>>
 <$wikify name="appify.macroTitle" text=<<macroTitle>>>
 <$set name="appify.componentType" value="page">
 <$wikify name="appify.divId" text="""<<appify.activeAppName>>-wrapper""">
+<$wikify name="appify.viewTitles" text=<<themeViewTitle>>>
 <div id=<<appify.divId>>>
 
 <<editAppifyConfig>>{{||$:/plugins/rimi/appify/ActiveComponentRenderer}}
 
 </div>
 </$wikify>
-</$set>
 </$wikify>
+</$set>
 </$wikify>
 </$wikify>
 </$wikify>

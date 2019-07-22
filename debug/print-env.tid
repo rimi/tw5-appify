@@ -1,5 +1,5 @@
 created: 20190721125405068
-modified: 20190722105339333
+modified: 20190722130359396
 tags: 
 title: $:/plugins/rimi/appify/debug/print-env
 type: text/vnd.tiddlywiki
@@ -13,7 +13,6 @@ type: text/vnd.tiddlywiki
 |appify.sectionDynData|<<appify.sectionDynData>>|The current sections dynamic-data|
 |appify.sectionConfigDynDataRegognizedTagsFieldName|<<appify.sectionConfigDynDataRegognizedTagsFieldName>>|The name of the configs field that contain the recognized tags|
 |appify.sectionDynDataRegognizedTags|<<appify.sectionDynDataRegognizedTags>>|The tags of the sections dynamic data that are resolved to templates withing current section|
-|appify.sectionDynTemplates|<<appify.sectionDynTemplates>>|The dynamically calculated Template|
 |appify.activeThemeName|<<appify.activeThemeName>>|The currently active Theme|
 |appify.availableThemes|<<appify.availableThemes>>|The currently available Themes|
 |appify.activeStyleName|<<appify.activeStyleName>>|The currently active Style|
@@ -21,7 +20,7 @@ type: text/vnd.tiddlywiki
 |appify.activeLangName|<<appify.activeLangName>>|The currently active Language|
 |appify.availableLangs|<<appify.availableLangs>>|The currently available Languages|
 |appify.activeEditMode|<<appify.activeEditMode>>|The currently active Edit-Mode|
-|appify.viewTitle|<<appify.viewTitle>>|Title of current View|
+|appify.viewTitles|<<appify.viewTitles>>|Title(s) of current View(s)|
 |appify.styleTitle|<<appify.styleTitle>>|Title of current Style|
 |appify.macroTitle|<<appify.macroTitle>>|Title of current Macro|
 |appify.componentType|<<appify.componentType>>|Type of component (page or section)|

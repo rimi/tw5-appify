@@ -1,5 +1,6 @@
 created: 20190310072223522
-modified: 20190722110643359
+modified: 20190722130640825
+tags: 
 title: $:/plugins/rimi/appify/macros
 type: text/vnd.tiddlywiki
 
@@ -38,8 +39,8 @@ type: text/vnd.tiddlywiki
 <$wikify name="appify.sectionDynDataRegognizedTags" text="""<$view tiddler=<<appify.activeConfig>> field=<<appify.sectionConfigDynDataRegognizedTagsFieldName>>/>""">
 <$wikify name="appify.divId" text=<<sectionId "$id$">>>
 <$wikify name="appify.sectionFolder" text=<<sectionFolder "$id$">>>
-<$wikify name="appify.sectionDynTemplates" text=<<calcDynTemplates>>>
-<div id=<<appify.divId>>><$wikify name="currentTiddler" text=<<sectionViewTitle "$id$">>><$set name="appify.viewTitle" value=<<currentTiddler>>><$wikify name="appify.styleTitle" text=<<styleTitle>>><$wikify name="appify.macroTitle" text=<<macroTitle>>><$macrocall $name="editSectionButton" sectionId="$id$"/>{{||$:/plugins/rimi/appify/ActiveComponentRenderer}}</$wikify></$wikify></$set></$wikify></div>
+<$wikify name="appify.viewTitles" text=<<calcDynTemplates>>>
+<div id=<<appify.divId>>><$wikify name="currentTiddler" text=<<sectionViewTitle "$id$">>><$wikify name="appify.styleTitle" text=<<styleTitle>>><$wikify name="appify.macroTitle" text=<<macroTitle>>><$macrocall $name="editSectionButton" sectionId="$id$"/>{{||$:/plugins/rimi/appify/ActiveComponentRenderer}}</$wikify></$wikify></$wikify></div>
 </$wikify>
 </$wikify>
 </$wikify>
