@@ -1,5 +1,5 @@
 created: 20190310072223522
-modified: 20190722142534059
+modified: 20190722150236750
 tags: 
 title: $:/plugins/rimi/appify/macros
 type: text/vnd.tiddlywiki
@@ -108,7 +108,7 @@ type: text/vnd.tiddlywiki
 
 <$reveal type="match" state="$:/state/rimi/dev-mode" text="on" default="off">
 <$button tooltip="Configure Appify">
-<$action-sendmessage $message=<<appify.activeEditMode>>} $param="$:/plugins/rimi/appify/description" appify.activeConfig=<<appify.activeConfig>>/>
+<$action-sendmessage $message=<<appify.activeEditMode>>} $param="$:/plugins/rimi/appify/application-manager" appify.activeConfig=<<appify.activeConfig>>/>
 {{$:/core/images/star-filled}}
 </$button>
 </$reveal>
