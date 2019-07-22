@@ -1,5 +1,5 @@
 created: 20190310072223522
-modified: 20190722175944095
+modified: 20190722185700092
 tags: 
 title: $:/plugins/rimi/appify/macros
 type: text/vnd.tiddlywiki
@@ -24,7 +24,7 @@ type: text/vnd.tiddlywiki
 
 \define sectionViewTitle(id, appName:"") <<sectionFolder "$id$" "$appName$">>/<<resolveLangName>>
 
-\define styleTitle(viewTitle, styleName:"") <<appify.sectionFolder>>/styles/<<resolveStyleName "$styleName$">>
+\define styleTitle(styleName:"") <<appify.sectionFolder>>/styles/<<resolveStyleName "$styleName$">>
 
 \define macroTitle(viewTitle) <<appify.sectionFolder>>/macro
 
@@ -37,10 +37,20 @@ type: text/vnd.tiddlywiki
 <$wikify name="appify.sectionDynData" text="""<$view tiddler=<<appify.activeConfig>> field=<<appify.sectionConfigDynDataFieldName>>/>""">
 <$wikify name="appify.sectionConfigDynDataRegognizedTagsFieldName" text="""appify.dyn-data.<<appify.sectionId>>.recognized-tags""">
 <$wikify name="appify.sectionDynDataRegognizedTags" text="""<$view tiddler=<<appify.activeConfig>> field=<<appify.sectionConfigDynDataRegognizedTagsFieldName>>/>""">
+<$wikify name="appify.sectionConfigDynDataRegognizedConstantsFieldName" text="""appify.dyn-data.<<appify.sectionId>>.recognized-constants""">
+<$wikify name="appify.sectionDynDataRegognizedConstants" text="""<$view tiddler=<<appify.activeConfig>> field=<<appify.sectionConfigDynDataRegognizedConstantsFieldName>>/>""">
 <$wikify name="appify.divId" text=<<sectionId "$id$">>>
 <$wikify name="appify.sectionFolder" text=<<sectionFolder "$id$">>>
 <$wikify name="appify.viewTitles" text=<<calcDynTemplates>>>
-<div id=<<appify.divId>>><$wikify name="currentTiddler" text=<<sectionViewTitle "$id$">>><$wikify name="appify.styleTitle" text=<<styleTitle>>><$wikify name="appify.macroTitle" text=<<macroTitle>>><$macrocall $name="editSectionButton" sectionId="$id$"/>{{||$:/plugins/rimi/appify/ActiveComponentRenderer}}</$wikify></$wikify></$wikify></div>
+<$wikify name="currentTiddler" text=<<sectionViewTitle "$id$">>>
+<$wikify name="appify.styleTitle" text=<<styleTitle>>>
+<$wikify name="appify.macroTitle" text=<<macroTitle>>>
+<div id=<<appify.divId>>><$macrocall $name="editSectionButton" sectionId="$id$"/>{{||$:/plugins/rimi/appify/ActiveComponentRenderer}}</div>
+</$wikify>
+</$wikify>
+</$wikify>
+</$wikify>
+</$wikify>
 </$wikify>
 </$wikify>
 </$wikify>
@@ -55,20 +65,39 @@ type: text/vnd.tiddlywiki
 \define calcDynTemplates()
 <$set name="appify.sectionDynData" value=<<appify.sectionDynData>> emptyValue="constants/default">
 <$list filter="[enlist<appify.sectionDynData>]">
-<$list filter="[<currentTiddler>prefix[constants/]]">
-<<appify.sectionFolder>>/templates/<<currentTiddler>>/<<appify.activeLangName>>
+<$list filter="[<currentTiddler>removeprefix[constants/]]">
+<$macrocall $name="createConstantTitle" constant=<<currentTiddler>>/>
 </$list>
 <$list filter="[<currentTiddler>!prefix[constants/]]">
 <$list filter="[<currentTiddler>is[tiddler]]">
 <$list filter="[<currentTiddler>tags[]]" variable="tagName">
 <$list filter="[enlist<appify.sectionDynDataRegognizedTags>prefix<tagName>]">
-<<appify.sectionFolder>>/templates/based-on-tag/<<tagName>>
+<$macrocall $name="createTagBasedTitle" tag=<<tagName>>/>
 </$list>
 </$list>
 </$list>
 </$list>
 </$list>
 </$set>
+\end
+
+\define createConstantTitle(constant) <<appify.sectionFolder>>/templates/constants/$constant$/<<appify.activeLangName>>
+\define createTagBasedTitle(tag) <<appify.sectionFolder>>/templates/based-on-tag/$tag$
+
+
+\define calcAllPossibleStyleTitles()
+<$list filter="[enlist<appify.availableStyles>]">
+<$macrocall $name="styleTitle" styleName=<<currentTiddler>>/>
+</$list>
+\end
+
+\define calcAllPossibleViewTitles()
+<$list filter="[enlist<appify.sectionDynDataRegognizedConstants>]">
+<$macrocall $name="createConstantTitle" constant=<<currentTiddler>>/>
+</$list>
+<$list filter="[enlist<appify.sectionDynDataRegognizedTags>]">
+<$macrocall $name="createTagBasedTitle" tag=<<currentTiddler>>/>
+</$list>
 \end
 
 \define editComponentButton()
@@ -116,5 +145,5 @@ type: text/vnd.tiddlywiki
 \end
 
 \define sendMessageWithFullAppifyEnv(message, param)
-<$action-sendmessage $message="$message$" $param="$param$" appify.activeAppName=<<appify.activeAppName>> appify.activeConfig=<<appify.activeConfig>> appify.activeThemeName=<<appify.activeThemeName>> appify.availableThemes=<<appify.availableThemes>> appify.activeStyleName=<<appify.activeStyleName>> appify.availableStyles=<<appify.availableStyles>> appify.activeLangName=<<appify.activeLangName>> appify.availableLangs=<<appify.availableLangs>> appify.activeEditMode=<<appify.activeEditMode>> appify.sectionFolder=<<appify.sectionFolder>> appify.styleTitle=<<appify.styleTitle>> appify.macroTitle=<<appify.macroTitle>> appify.divId=<<appify.divId>> appify.viewTitles=<<appify.viewTitles>> appify.componentType=<<appify.componentType>> appify.sectionId=<<appify.sectionId>> appify.sectionConfigDynDataFieldName=<<appify.sectionConfigDynDataFieldName>> appify.sectionDynData=<<appify.sectionDynData>> appify.sectionConfigDynDataRegognizedTagsFieldName=<<appify.sectionConfigDynDataRegognizedTagsFieldName>> appify.sectionDynDataRegognizedTags=<<appify.sectionDynDataRegognizedTags>>/>
+<$action-sendmessage $message="$message$" $param="$param$" appify.activeAppName=<<appify.activeAppName>> appify.activeConfig=<<appify.activeConfig>> appify.activeThemeName=<<appify.activeThemeName>> appify.availableThemes=<<appify.availableThemes>> appify.activeStyleName=<<appify.activeStyleName>> appify.availableStyles=<<appify.availableStyles>> appify.activeLangName=<<appify.activeLangName>> appify.availableLangs=<<appify.availableLangs>> appify.activeEditMode=<<appify.activeEditMode>> appify.sectionFolder=<<appify.sectionFolder>> appify.styleTitle=<<appify.styleTitle>> appify.macroTitle=<<appify.macroTitle>> appify.divId=<<appify.divId>> appify.viewTitles=<<appify.viewTitles>> appify.componentType=<<appify.componentType>> appify.sectionId=<<appify.sectionId>> appify.sectionConfigDynDataFieldName=<<appify.sectionConfigDynDataFieldName>> appify.sectionDynData=<<appify.sectionDynData>> appify.sectionConfigDynDataRegognizedTagsFieldName=<<appify.sectionConfigDynDataRegognizedTagsFieldName>> appify.sectionDynDataRegognizedTags=<<appify.sectionDynDataRegognizedTags>> appify.sectionConfigDynDataRegognizedConstantsFieldName=<<appify.sectionConfigDynDataRegognizedConstantsFieldName>> appify.sectionDynDataRegognizedConstants=<<appify.sectionDynDataRegognizedConstants>>/>
 \end

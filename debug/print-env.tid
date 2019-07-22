@@ -1,6 +1,6 @@
 caption: Current ENV
 created: 20190721125405068
-modified: 20190722175844965
+modified: 20190722185559859
 tags: 
 title: $:/plugins/rimi/appify/debug/print-env
 type: text/vnd.tiddlywiki
@@ -14,6 +14,8 @@ type: text/vnd.tiddlywiki
 |appify.sectionDynData|<<appify.sectionDynData>>|The current sections dynamic-data|
 |appify.sectionConfigDynDataRegognizedTagsFieldName|<<appify.sectionConfigDynDataRegognizedTagsFieldName>>|The name of the configs field that contain the recognized tags|
 |appify.sectionDynDataRegognizedTags|<<appify.sectionDynDataRegognizedTags>>|The tags of the sections dynamic data that are resolved to templates withing current section|
+|appify.sectionConfigDynDataRegognizedConstantsFieldName|<<appify.sectionConfigDynDataRegognizedConstantsFieldName>>|The name of the configs field that contain the recognized constants|
+|appify.sectionDynDataRegognizedConstants|<<appify.sectionDynDataRegognizedConstants>>|The constants of the sections dynamic data that are resolved to templates withing current section|
 |appify.activeThemeName|<<appify.activeThemeName>>|The currently active Theme|
 |appify.availableThemes|<<appify.availableThemes>>|The currently available Themes|
 |appify.activeStyleName|<<appify.activeStyleName>>|The currently active Style|

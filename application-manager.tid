@@ -1,5 +1,5 @@
 created: 20190721094830873
-modified: 20190722150112512
+modified: 20190722190422125
 tags: 
 title: $:/plugins/rimi/appify/application-manager
 type: text/vnd.tiddlywiki
@@ -21,7 +21,3 @@ Configured Apps:
 </$list>
 </ul>
 </$details>
-
-!! Description:
-
-{{$:/plugins/rimi/appify/description}}
