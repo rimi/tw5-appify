@@ -1,5 +1,5 @@
 created: 20190310072223522
-modified: 20190722130640825
+modified: 20190722142534059
 tags: 
 title: $:/plugins/rimi/appify/macros
 type: text/vnd.tiddlywiki
@@ -62,7 +62,7 @@ type: text/vnd.tiddlywiki
 <$list filter="[<currentTiddler>is[tiddler]]">
 <$list filter="[<currentTiddler>tags[]]" variable="tagName">
 <$list filter="[enlist<appify.sectionDynDataRegognizedTags>prefix<tagName>]">
-<<appify.sectionFolder>>/templates/based-on-tags/<<tagName>>
+<<appify.sectionFolder>>/templates/based-on-tag/<<tagName>>
 </$list>
 </$list>
 </$list>
