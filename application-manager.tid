@@ -1,13 +1,9 @@
 created: 20190721094830873
-modified: 20190721152304605
+modified: 20190722150112512
 tags: 
 title: $:/plugins/rimi/appify/application-manager
 type: text/vnd.tiddlywiki
 
-TODOs
-
-* 
------
 [[Current active App|$:/appify/current-active-app]]: {{$:/appify/current-active-app!!appify.active-app}}
 
 Configured Apps:
@@ -25,3 +21,7 @@ Configured Apps:
 </$list>
 </ul>
 </$details>
+
+!! Description:
+
+{{$:/plugins/rimi/appify/description}}
