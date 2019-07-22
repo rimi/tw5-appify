@@ -1,5 +1,5 @@
 created: 20190316142812279
-modified: 20190719163444034
+modified: 20190722150159884
 tags: 
 title: $:/plugins/rimi/appify/description
 type: text/vnd.tiddlywiki
@@ -20,9 +20,3 @@ type: text/vnd.tiddlywiki
 ** ''appify.macroTitle'' the name of the active MACRO-tiddler
 * DEV Modes:
 ** [[App-Level|$:/state/rimi/dev-mode]] (currently ''{{$:/state/rimi/dev-mode}}'')
-
-!! Current Configuration
-
-<$tiddler tiddler=<<appify.activeConfig>>>
-<$transclude tiddler=<<appify.activeConfig>> mode="block"/>
-</$tiddler>
