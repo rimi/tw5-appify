@@ -1,8 +1,10 @@
 created: 20190315165927652
-modified: 20190722130742987
+modified: 20190722134727164
 tags: 
 title: $:/plugins/rimi/appify/ActiveComponentRenderer
 type: text/vnd.tiddlywiki
+
+\import [<appify.macroTitle>]
 
 <$reveal type="match" state="$:/state/rimi/dev-mode" text="on">
 <<editComponentButton>>
