@@ -1,5 +1,6 @@
 created: 20190309164829460
-modified: 20190320180024458
+modified: 20190722175322759
+tags: 
 title: $:/plugins/rimi/appify/edit-active-component
 type: text/vnd.tiddlywiki
 
@@ -8,6 +9,4 @@ type: text/vnd.tiddlywiki
 <<editCurrentTemplateButton>>
 
 !! Component-Editor
-<$tiddler tiddler=<<appify.viewTitle>>>
-<<tabs tabsList:"$:/plugins/rimi/appify/render-active-component-view $:/plugins/rimi/appify/templates/edit-current-tiddler $:/plugins/rimi/appify/edit-active-component/styles $:/plugins/rimi/appify/edit-active-component/macro" default:"$:/plugins/rimi/appify/render-active-component-view" state:"$:/state/appify/component-editor-tabs">>
-</$tiddler>
+<<tabs tabsList:"$:/plugins/rimi/appify/debug/print-env $:/plugins/rimi/appify/render-active-component-views $:/plugins/rimi/appify/edit-active-component/views $:/plugins/rimi/appify/edit-active-component/styles $:/plugins/rimi/appify/edit-active-component/macro" default:"$:/plugins/rimi/appify/debug/print-env" state:"$:/state/appify/component-editor-tabs">>

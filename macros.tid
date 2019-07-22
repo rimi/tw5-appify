@@ -1,5 +1,5 @@
 created: 20190310072223522
-modified: 20190722150236750
+modified: 20190722175944095
 tags: 
 title: $:/plugins/rimi/appify/macros
 type: text/vnd.tiddlywiki
@@ -72,12 +72,12 @@ type: text/vnd.tiddlywiki
 \end
 
 \define editComponentButton()
-
+<$reveal type="match" state="$:/state/rimi/dev-mode" text="on" default="off">
 <$button tooltip="Edit Content">
-<$action-sendmessage $message=<<appify.activeEditMode>> $param="$:/plugins/rimi/appify/edit-active-component" appify.viewTitle=<<appify.viewTitle>> appify.styleTitle=<<appify.styleTitle>> appify.availableStyles=<<appify.availableStyles>> appify.macroTitle=<<appify.macroTitle>> appify.activeEditMode=<<appify.activeEditMode>>/>
+<$macrocall $name="sendMessageWithFullAppifyEnv" message=<<appify.activeEditMode>> param="$:/plugins/rimi/appify/edit-active-component"/>
 {{$:/core/images/options-button}}
 </$button>
-
+</$reveal>
 \end
 
 \define editCurrentTemplateButton(tooltip:"") <$macrocall $name="editTemplateButton" templateTiddler=<<currentTiddler>> tooltip="$tooltip$"/>
@@ -113,4 +113,8 @@ type: text/vnd.tiddlywiki
 </$button>
 </$reveal>
 
+\end
+
+\define sendMessageWithFullAppifyEnv(message, param)
+<$action-sendmessage $message="$message$" $param="$param$" appify.activeAppName=<<appify.activeAppName>> appify.activeConfig=<<appify.activeConfig>> appify.activeThemeName=<<appify.activeThemeName>> appify.availableThemes=<<appify.availableThemes>> appify.activeStyleName=<<appify.activeStyleName>> appify.availableStyles=<<appify.availableStyles>> appify.activeLangName=<<appify.activeLangName>> appify.availableLangs=<<appify.availableLangs>> appify.activeEditMode=<<appify.activeEditMode>> appify.sectionFolder=<<appify.sectionFolder>> appify.styleTitle=<<appify.styleTitle>> appify.macroTitle=<<appify.macroTitle>> appify.divId=<<appify.divId>> appify.viewTitles=<<appify.viewTitles>> appify.componentType=<<appify.componentType>> appify.sectionId=<<appify.sectionId>> appify.sectionConfigDynDataFieldName=<<appify.sectionConfigDynDataFieldName>> appify.sectionDynData=<<appify.sectionDynData>> appify.sectionConfigDynDataRegognizedTagsFieldName=<<appify.sectionConfigDynDataRegognizedTagsFieldName>> appify.sectionDynDataRegognizedTags=<<appify.sectionDynDataRegognizedTags>>/>
 \end
