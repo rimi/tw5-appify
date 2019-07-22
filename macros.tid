@@ -1,5 +1,5 @@
 created: 20190310072223522
-modified: 20190721152206663
+modified: 20190722110643359
 title: $:/plugins/rimi/appify/macros
 type: text/vnd.tiddlywiki
 
@@ -15,13 +15,13 @@ type: text/vnd.tiddlywiki
 
 \define resolveViewTitle(viewTitle) <$reveal text="$viewTitle$" default="" type="match"><<appify.viewTitle>></$reveal><$reveal text="$viewTitle$" default="" type="nomatch">$viewTitle$</$reveal>
 
-\define themeViewTitle(appName, themeName) <<appifyTitlesBasePrefix>><<resolveAppName "$appName$">>/themes/<<resolveLangName>>/<<resolveThemeName "$themeName$">>
-
 \define themeFolder(appName, themeName) <<appifyTitlesBasePrefix>><<resolveAppName "$appName$">>/themes/<<resolveThemeName "$themeName$">>
 
-\define sectionViewTitle(id, appName:"") <<appifyTitlesBasePrefix>><<resolveAppName "$appName$">>/sections/<<resolveLangName>>/$id$
+\define themeViewTitle(appName, themeName) <<themeFolder "$appName$" "$themeName$">>/<<resolveLangName>>
 
 \define sectionFolder(id, appName:"") <<appifyTitlesBasePrefix>><<resolveAppName "$appName$">>/sections/$id$
+
+\define sectionViewTitle(id, appName:"") <<sectionFolder "$id$" "$appName$">>/<<resolveLangName>>
 
 \define styleTitle(viewTitle, styleName:"") <<appify.sectionFolder>>/styles/<<resolveStyleName "$styleName$">>
 
@@ -34,14 +34,39 @@ type: text/vnd.tiddlywiki
 <$set name="appify.sectionId" value="$id$">
 <$wikify name="appify.sectionConfigDynDataFieldName" text="""appify.dyn-data.<<appify.sectionId>>""">
 <$wikify name="appify.sectionDynData" text="""<$view tiddler=<<appify.activeConfig>> field=<<appify.sectionConfigDynDataFieldName>>/>""">
+<$wikify name="appify.sectionConfigDynDataRegognizedTagsFieldName" text="""appify.dyn-data.<<appify.sectionId>>.recognized-tags""">
+<$wikify name="appify.sectionDynDataRegognizedTags" text="""<$view tiddler=<<appify.activeConfig>> field=<<appify.sectionConfigDynDataRegognizedTagsFieldName>>/>""">
 <$wikify name="appify.divId" text=<<sectionId "$id$">>>
 <$wikify name="appify.sectionFolder" text=<<sectionFolder "$id$">>>
+<$wikify name="appify.sectionDynTemplates" text=<<calcDynTemplates>>>
 <div id=<<appify.divId>>><$wikify name="currentTiddler" text=<<sectionViewTitle "$id$">>><$set name="appify.viewTitle" value=<<currentTiddler>>><$wikify name="appify.styleTitle" text=<<styleTitle>>><$wikify name="appify.macroTitle" text=<<macroTitle>>><$macrocall $name="editSectionButton" sectionId="$id$"/>{{||$:/plugins/rimi/appify/ActiveComponentRenderer}}</$wikify></$wikify></$set></$wikify></div>
 </$wikify>
 </$wikify>
 </$wikify>
 </$wikify>
+</$wikify>
+</$wikify>
+</$wikify>
 </$set>
+</$set>
+\end
+
+\define calcDynTemplates()
+<$set name="appify.sectionDynData" value=<<appify.sectionDynData>> emptyValue="constants/default">
+<$list filter="[enlist<appify.sectionDynData>]">
+<$list filter="[<currentTiddler>prefix[constants/]]">
+<<appify.sectionFolder>>/templates/<<currentTiddler>>/<<appify.activeLangName>>
+</$list>
+<$list filter="[<currentTiddler>!prefix[constants/]]">
+<$list filter="[<currentTiddler>is[tiddler]]">
+<$list filter="[<currentTiddler>tags[]]" variable="tagName">
+<$list filter="[enlist<appify.sectionDynDataRegognizedTags>prefix<tagName>]">
+<<appify.sectionFolder>>/templates/based-on-tags/<<tagName>>
+</$list>
+</$list>
+</$list>
+</$list>
+</$list>
 </$set>
 \end
 
