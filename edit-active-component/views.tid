@@ -1,12 +1,13 @@
 caption: Views
 created: 20190722175716999
-modified: 20190722190017227
+modified: 20190723112306404
 tags: 
 title: $:/plugins/rimi/appify/edit-active-component/views
+type: text/vnd.tiddlywiki
 
 <<editTemplateButton "$:/plugins/rimi/appify/edit-active-component/views">>
 Specified tags to be recognized: <<appify.sectionDynDataRegognizedTags>><br/>
 Known constants to be recognized: <<appify.sectionDynDataRegognizedConstants>><br/>
 <$wikify name="availableViews" text=<<calcAllPossibleViewTitles>>>
-<<tabs tabsList:"[enlist<availableViews>]" state:"$:/state/appify/component-view-editor-tabs" template:"$:/plugins/rimi/appify/edit-active-component/views/tab">>
+<<tabs tabsList:"[enlist<availableViews>][enlist<appify.viewTitles>]" state:"$:/state/appify/component-view-editor-tabs" template:"$:/plugins/rimi/appify/edit-active-component/views/tab">>
 </$wikify>
