@@ -1,5 +1,5 @@
 created: 20190310072223522
-modified: 20190722185700092
+modified: 20190723154944135
 tags: 
 title: $:/plugins/rimi/appify/macros
 type: text/vnd.tiddlywiki
@@ -27,6 +27,8 @@ type: text/vnd.tiddlywiki
 \define styleTitle(styleName:"") <<appify.sectionFolder>>/styles/<<resolveStyleName "$styleName$">>
 
 \define macroTitle(viewTitle) <<appify.sectionFolder>>/macro
+
+\define themeMacroTitle() <<appifyTitlesBasePrefix>><<resolveAppName>>/macro
 
 \define sectionId(id) <<resolveAppName>>-section-$id$
 
