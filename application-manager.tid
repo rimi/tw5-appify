@@ -1,18 +1,18 @@
 created: 20190721094830873
-modified: 20190722190422125
+modified: 20190818121117775
 tags: 
 title: $:/plugins/rimi/appify/application-manager
 type: text/vnd.tiddlywiki
 
-[[Current active App|$:/appify/current-active-app]]: {{$:/appify/current-active-app!!appify.active-app}}
+[[Current active App|$:/appify/current-active-app]]: ''{{$:/appify/current-active-app!!appify.active-app}}''
+
+<hr/>
 
 Configured Apps:
 
-<ul>
 <$list filter="[tag[appify:config]]">
-<li><$details summary={{!!caption}}><$link><$view field="caption"><$view field="title"/></$view></$link><br/><$transclude tiddler="$:/plugins/rimi/appify/ui-contrib/ViewTemplate/tagged/appify:config"/></$details></li>
+<$details summary={{!!caption}}><$link><$view field="caption"><$view field="title"/></$view></$link><br/><$transclude tiddler="$:/plugins/rimi/appify/ui-contrib/ViewTemplate/tagged/appify:config"/></$details>
 </$list>
-</ul>
 
 <$details summary="All fields with prefix 'appify.'">
 <ul>
