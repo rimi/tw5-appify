@@ -1,8 +1,11 @@
+caption: Appify-Manager
 created: 20190721094830873
-modified: 20190818121117775
+modified: 20190818142702354
 tags: 
 title: $:/plugins/rimi/appify/application-manager
 type: text/vnd.tiddlywiki
+
+<<editCurrent>>
 
 [[Current active App|$:/appify/current-active-app]]: ''{{$:/appify/current-active-app!!appify.active-app}}''
 
