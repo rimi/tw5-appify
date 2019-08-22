@@ -1,5 +1,5 @@
 created: 20190315165927652
-modified: 20190722180048085
+modified: 20190821065120952
 tags: 
 title: $:/plugins/rimi/appify/ActiveComponentRenderer
 type: text/vnd.tiddlywiki
@@ -10,7 +10,7 @@ type: text/vnd.tiddlywiki
 
 <$list filter="[<appify.styleTitle>is[tiddler]]">
 <style>
-<$view/>
+{{}}
 </style>
 </$list>
 
