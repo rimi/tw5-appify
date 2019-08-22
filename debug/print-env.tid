@@ -1,6 +1,6 @@
 caption: Current ENV
 created: 20190721125405068
-modified: 20190722185559859
+modified: 20190822055026627
 tags: 
 title: $:/plugins/rimi/appify/debug/print-env
 type: text/vnd.tiddlywiki
@@ -8,6 +8,7 @@ type: text/vnd.tiddlywiki
 |!Variable|!Value|!Description|
 |appify.activeAppName|<<appify.activeAppName>>|The currently active App|
 |appify.activeConfig|<<appify.activeConfig>>|The currently active Configuration|
+|appify.activeDataState|<<appify.activeDataState>>|The currently active Data-State of the App|
 |appify.sectionId|<<appify.sectionId>>|The current sections id|
 |appify.sectionFolder|<<appify.sectionFolder>>|Folder/Basename to store lang-independent-stuff (styles+macros) in|
 |appify.sectionConfigDynDataFieldName|<<appify.sectionConfigDynDataFieldName>>|The name of the configs field that contains the sections dynamic data|
