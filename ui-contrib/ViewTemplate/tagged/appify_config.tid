@@ -1,5 +1,5 @@
 created: 20190721100439905
-modified: 20190822054424734
+modified: 20190822114321469
 tags: $:/tags/ViewTemplate
 title: $:/plugins/rimi/appify/ui-contrib/ViewTemplate/tagged/appify:config
 type: text/vnd.tiddlywiki
@@ -18,7 +18,7 @@ type: text/vnd.tiddlywiki
 <li>Data State stored in tiddler ''{{!!appify.data-state}}''</li>
 </ul>
 
-<h2>Current Dynamic Data (<$link>Open</$link>):</h2>
+<h2>Current Render-Template Data (<$link>Open</$link>):</h2>
 
 <table>
 <$list filter="[is[current]fields[]prefix[appify.dyn-data.]sort[]]" variable="fieldName">
@@ -31,4 +31,19 @@ type: text/vnd.tiddlywiki
 </$list>
 </table>
 
+<h2>Current Data State (<$link to={{!!appify.data-state}}>Open</$link>):</h2>
+
+<table>
+<$list filter="[{!!appify.data-state}fields[]prefix[appify.selected.]sort[]]" variable="fieldName">
+<tr>
+<th><<fieldName>></th>
+<$list filter="[{!!appify.data-state}get<fieldName>]">
+<td><<currentTiddler>></td>
 </$list>
+</tr>
+</$list>
+</table>
+
+</$list>
+
+
