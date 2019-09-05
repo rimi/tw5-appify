@@ -27,7 +27,6 @@ RimirTogglerWidget.prototype = new Widget();
 Render this widget into the DOM
 */
 RimirTogglerWidget.prototype.render = function(parent,nextSibling) {
-	console.log("enter render")
 	this.parentDomNode = parent;
 	this.computeAttributes();
 	this.execute();
@@ -44,7 +43,6 @@ RimirTogglerWidget.prototype.render = function(parent,nextSibling) {
 Compute the internal state of the widget
 */
 RimirTogglerWidget.prototype.execute = function() {
-	console.log("enter execute")
 	// Get our parameters
 	this.readState();
 	// Construct the child widgets
@@ -57,10 +55,8 @@ RimirTogglerWidget.prototype.execute = function() {
 Read the state tiddler
 */
 RimirTogglerWidget.prototype.readState = function() {
-	console.log("enter readState")
 	// Read the information from the state tiddler
 	var stateTitleTiddler = this.wiki.getTiddler(this.state);
-	console.log("Tiddler:" + JSON.stringify(stateTitleTiddler));
 	if(!stateTitleTiddler){
 		this.isOpen = false;
 	}else{
@@ -76,7 +72,6 @@ RimirTogglerWidget.prototype.readState = function() {
 Selectively refreshes the widget if needed. Returns true if the widget or any of its children needed re-rendering
 */
 RimirTogglerWidget.prototype.refresh = function(changedTiddlers) {
-	console.log("enter refresh")
 	var currentlyOpen = this.isOpen;
 	this.readState();
 	if(this.isOpen !== currentlyOpen) {
