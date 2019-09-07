@@ -1,8 +1,8 @@
 created: 20190308171724134
 key: alt-2
-modified: 20190313163517641
+modified: 20190907164849201
 tags: $:/tags/KeyboardShortcut
-title: $:/plugins/rimi/appify/enable-keyboard-shortcut
+title: $:/plugins/rimi/appify/keyboard-shortcuts/enable-appify
 type: text/vnd.tiddlywiki
 
 <$action-setfield $tiddler="$:/core/ui/PageTemplate" page-template="$:/plugins/rimi/appify/PageTemplate"/>
