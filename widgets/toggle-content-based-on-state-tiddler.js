@@ -30,7 +30,10 @@ RimirTogglerWidget.prototype.render = function(parent,nextSibling) {
 	this.parentDomNode = parent;
 	this.computeAttributes();
 	this.execute();
-	var domNode = this.document.createElement("span");
+	var domNode = this.document.createElement(this.revealTag);
+	var classes = this["class"].split(" ") || [];
+	//classes.push("tc-reveal");
+	domNode.className = classes.join(" ");
 	parent.insertBefore(domNode,nextSibling);
 	this.renderChildren(domNode,null);
 	if(!this.isOpen) {
@@ -44,6 +47,9 @@ Compute the internal state of the widget
 */
 RimirTogglerWidget.prototype.execute = function() {
 	// Get our parameters
+	this.revealTag = this.getAttribute("tag", "div");
+	this["class"] = this.getAttribute("class","");
+	// Compute the title of the state tiddler and read it
 	this.readState();
 	// Construct the child widgets
 	var childNodes = this.isOpen ? this.parseTreeNode.children : [];
