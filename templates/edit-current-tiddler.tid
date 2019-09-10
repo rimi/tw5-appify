@@ -1,6 +1,6 @@
 caption: Tiddler
 created: 20190310120435142
-modified: 20190910052109024
+modified: 20190910053823403
 tags: 
 title: $:/plugins/rimi/appify/templates/edit-current-tiddler
 type: text/vnd.tiddlywiki
@@ -14,4 +14,4 @@ Tiddler DOES NOT exist!
 
 <$link to=<<currentTiddler>>>Open Tiddler</$link><br/>
 
-<$edit tiddler=<<currentTiddler>> class="simple-edit-textarea"/>
+<$edit-text tiddler=<<currentTiddler>> field="text" class="simple-edit-textarea"/>
