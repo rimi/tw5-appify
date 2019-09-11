@@ -37,7 +37,11 @@ RimirTogglerWidget.prototype.render = function(parent,nextSibling) {
 	parent.insertBefore(domNode,nextSibling);
 	this.renderChildren(domNode,null);
 	if(!this.isOpen) {
-		domNode.setAttribute("hidden","true");
+		if("visibility" === this.hideType) {
+			domNode.setAttribute("style","visibility: hidden;");
+		}else{
+			domNode.setAttribute("hidden","true"); //sets "display: none;"
+		}
 	}
 	this.domNodes.push(domNode);
 };
@@ -49,6 +53,7 @@ RimirTogglerWidget.prototype.execute = function() {
 	// Get our parameters
 	this.revealTag = this.getAttribute("tag", "div");
 	this["class"] = this.getAttribute("class","");
+	this.hideType = this.getAttribute("hideType","display");
 	// Compute the title of the state tiddler and read it
 	this.readState();
 	// Construct the child widgets
