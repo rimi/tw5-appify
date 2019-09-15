@@ -1,6 +1,6 @@
 caption: Current ENV
 created: 20190721125405068
-modified: 20190822055026627
+modified: 20190915074056732
 tags: 
 title: $:/plugins/rimi/appify/debug/print-env
 type: text/vnd.tiddlywiki
@@ -13,10 +13,10 @@ type: text/vnd.tiddlywiki
 |appify.sectionFolder|<<appify.sectionFolder>>|Folder/Basename to store lang-independent-stuff (styles+macros) in|
 |appify.sectionConfigDynDataFieldName|<<appify.sectionConfigDynDataFieldName>>|The name of the configs field that contains the sections dynamic data|
 |appify.sectionDynData|<<appify.sectionDynData>>|The current sections dynamic-data|
-|appify.sectionConfigDynDataRegognizedTagsFieldName|<<appify.sectionConfigDynDataRegognizedTagsFieldName>>|The name of the configs field that contain the recognized tags|
-|appify.sectionDynDataRegognizedTags|<<appify.sectionDynDataRegognizedTags>>|The tags of the sections dynamic data that are resolved to templates withing current section|
-|appify.sectionConfigDynDataRegognizedConstantsFieldName|<<appify.sectionConfigDynDataRegognizedConstantsFieldName>>|The name of the configs field that contain the recognized constants|
-|appify.sectionDynDataRegognizedConstants|<<appify.sectionDynDataRegognizedConstants>>|The constants of the sections dynamic data that are resolved to templates withing current section|
+|appify.sectionConfigDynDataRecognizedTagsFieldName|<<appify.sectionConfigDynDataRecognizedTagsFieldName>>|The name of the configs field that contain the recognized tags|
+|appify.sectionDynDataRecognizedTags|<<appify.sectionDynDataRecognizedTags>>|The tags of the sections dynamic data that are resolved to templates withing current section|
+|appify.sectionConfigDynDataRecognizedConstantsFieldName|<<appify.sectionConfigDynDataRecognizedConstantsFieldName>>|The name of the configs field that contain the recognized constants|
+|appify.sectionDynDataRecognizedConstants|<<appify.sectionDynDataRecognizedConstants>>|The constants of the sections dynamic data that are resolved to templates withing current section|
 |appify.activeThemeName|<<appify.activeThemeName>>|The currently active Theme|
 |appify.availableThemes|<<appify.availableThemes>>|The currently available Themes|
 |appify.activeStyleName|<<appify.activeStyleName>>|The currently active Style|

@@ -1,5 +1,5 @@
 created: 20190310072223522
-modified: 20190911062240532
+modified: 20190915074016331
 tags: 
 title: $:/plugins/rimi/appify/macros
 type: text/vnd.tiddlywiki
@@ -37,10 +37,10 @@ type: text/vnd.tiddlywiki
 <$set name="appify.sectionId" value="$id$">
 <$wikify name="appify.sectionConfigDynDataFieldName" text="""appify.dyn-data.<<appify.sectionId>>""">
 <$wikify name="appify.sectionDynData" text="""<$view tiddler=<<appify.activeConfig>> field=<<appify.sectionConfigDynDataFieldName>>/>""">
-<$wikify name="appify.sectionConfigDynDataRegognizedTagsFieldName" text="""appify.dyn-data.<<appify.sectionId>>.recognized-tags""">
-<$wikify name="appify.sectionDynDataRegognizedTags" text="""<$view tiddler=<<appify.activeConfig>> field=<<appify.sectionConfigDynDataRegognizedTagsFieldName>>/>""">
-<$wikify name="appify.sectionConfigDynDataRegognizedConstantsFieldName" text="""appify.dyn-data.<<appify.sectionId>>.recognized-constants""">
-<$wikify name="appify.sectionDynDataRegognizedConstants" text="""<$view tiddler=<<appify.activeConfig>> field=<<appify.sectionConfigDynDataRegognizedConstantsFieldName>>/>""">
+<$wikify name="appify.sectionConfigDynDataRecognizedTagsFieldName" text="""appify.dyn-data.<<appify.sectionId>>.recognized-tags""">
+<$wikify name="appify.sectionDynDataRecognizedTags" text="""<$view tiddler=<<appify.activeConfig>> field=<<appify.sectionConfigDynDataRecognizedTagsFieldName>>/>""">
+<$wikify name="appify.sectionConfigDynDataRecognizedConstantsFieldName" text="""appify.dyn-data.<<appify.sectionId>>.recognized-constants""">
+<$wikify name="appify.sectionDynDataRecognizedConstants" text="""<$view tiddler=<<appify.activeConfig>> field=<<appify.sectionConfigDynDataRecognizedConstantsFieldName>>/>""">
 <$wikify name="appify.divId" text=<<sectionId "$id$">>>
 <$wikify name="appify.sectionFolder" text=<<sectionFolder "$id$">>>
 <$wikify name="appify.viewTitles" text=<<calcDynTemplates>>>
@@ -73,7 +73,7 @@ type: text/vnd.tiddlywiki
 <$list filter="[<currentTiddler>!prefix[constants/]]">
 <$list filter="[<currentTiddler>is[tiddler]]">
 <$list filter="[<currentTiddler>tags[]]" variable="tagName">
-<$list filter="[enlist<appify.sectionDynDataRegognizedTags>prefix<tagName>]">
+<$list filter="[enlist<appify.sectionDynDataRecognizedTags>prefix<tagName>]">
 <$macrocall $name="createTagBasedTitle" tag=<<tagName>>/>
 </$list>
 </$list>
@@ -94,10 +94,10 @@ type: text/vnd.tiddlywiki
 \end
 
 \define calcAllPossibleViewTitles()
-<$list filter="[enlist<appify.sectionDynDataRegognizedConstants>]">
+<$list filter="[enlist<appify.sectionDynDataRecognizedConstants>]">
 <$macrocall $name="createConstantTitle" constant=<<currentTiddler>>/>
 </$list>
-<$list filter="[enlist<appify.sectionDynDataRegognizedTags>]">
+<$list filter="[enlist<appify.sectionDynDataRecognizedTags>]">
 <$macrocall $name="createTagBasedTitle" tag=<<currentTiddler>>/>
 </$list>
 \end
@@ -147,7 +147,7 @@ type: text/vnd.tiddlywiki
 \end
 
 \define sendMessageWithFullAppifyEnv(message, param)
-<$action-sendmessage $message="$message$" $param="$param$" appify.activeAppName=<<appify.activeAppName>> appify.activeConfig=<<appify.activeConfig>> appify.activeDataState=<<appify.activeDataState>> appify.activeThemeName=<<appify.activeThemeName>> appify.availableThemes=<<appify.availableThemes>> appify.activeStyleName=<<appify.activeStyleName>> appify.availableStyles=<<appify.availableStyles>> appify.activeLangName=<<appify.activeLangName>> appify.availableLangs=<<appify.availableLangs>> appify.activeEditMode=<<appify.activeEditMode>> appify.sectionFolder=<<appify.sectionFolder>> appify.styleTitle=<<appify.styleTitle>> appify.macroTitle=<<appify.macroTitle>> appify.divId=<<appify.divId>> appify.viewTitles=<<appify.viewTitles>> appify.componentType=<<appify.componentType>> appify.sectionId=<<appify.sectionId>> appify.sectionConfigDynDataFieldName=<<appify.sectionConfigDynDataFieldName>> appify.sectionDynData=<<appify.sectionDynData>> appify.sectionConfigDynDataRegognizedTagsFieldName=<<appify.sectionConfigDynDataRegognizedTagsFieldName>> appify.sectionDynDataRegognizedTags=<<appify.sectionDynDataRegognizedTags>> appify.sectionConfigDynDataRegognizedConstantsFieldName=<<appify.sectionConfigDynDataRegognizedConstantsFieldName>> appify.sectionDynDataRegognizedConstants=<<appify.sectionDynDataRegognizedConstants>>/>
+<$action-sendmessage $message="$message$" $param="$param$" appify.activeAppName=<<appify.activeAppName>> appify.activeConfig=<<appify.activeConfig>> appify.activeDataState=<<appify.activeDataState>> appify.activeThemeName=<<appify.activeThemeName>> appify.availableThemes=<<appify.availableThemes>> appify.activeStyleName=<<appify.activeStyleName>> appify.availableStyles=<<appify.availableStyles>> appify.activeLangName=<<appify.activeLangName>> appify.availableLangs=<<appify.availableLangs>> appify.activeEditMode=<<appify.activeEditMode>> appify.sectionFolder=<<appify.sectionFolder>> appify.styleTitle=<<appify.styleTitle>> appify.macroTitle=<<appify.macroTitle>> appify.divId=<<appify.divId>> appify.viewTitles=<<appify.viewTitles>> appify.componentType=<<appify.componentType>> appify.sectionId=<<appify.sectionId>> appify.sectionConfigDynDataFieldName=<<appify.sectionConfigDynDataFieldName>> appify.sectionDynData=<<appify.sectionDynData>> appify.sectionConfigDynDataRecognizedTagsFieldName=<<appify.sectionConfigDynDataRecognizedTagsFieldName>> appify.sectionDynDataRecognizedTags=<<appify.sectionDynDataRecognizedTags>> appify.sectionConfigDynDataRecognizedConstantsFieldName=<<appify.sectionConfigDynDataRecognizedConstantsFieldName>> appify.sectionDynDataRecognizedConstants=<<appify.sectionDynDataRecognizedConstants>>/>
 \end
 
 Contains macros that are ''core''-appify specific and are ''only used at Appify-Runtime''.
