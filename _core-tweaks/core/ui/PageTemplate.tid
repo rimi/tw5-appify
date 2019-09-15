@@ -1,5 +1,6 @@
 created: 20190718072756378
-modified: 20190722190508480
+modified: 20190915070145850
+page-template: $:/plugins/rimi/appify/PageTemplate
 tags: 
 title: $:/core/ui/PageTemplate
 type: text/vnd.tiddlywiki
@@ -29,12 +30,13 @@ tc-page-container tc-page-view-$(storyviewTitle)$ tc-language-$(languageTitle)$
 
 <$navigator story="$:/StoryList" history="$:/HistoryList" openLinkFromInsideRiver={{$:/config/Navigation/openLinkFromInsideRiver}} openLinkFromOutsideRiver={{$:/config/Navigation/openLinkFromOutsideRiver}} relinkOnRename={{$:/config/RelinkOnRename}}>
 
-<$list filter="[[$:/core/ui/PageTemplate]has[page-template]]">
-<$tiddler tiddler={{$:/core/ui/PageTemplate!!page-template}}>
-<$transclude tiddler={{$:/core/ui/PageTemplate!!page-template}}/>
+<$list filter="[[$:/appify/ActivePageTemplate]is[tiddler]]">
+<$tiddler tiddler="$:/appify/ActivePageTemplate">
+<$transclude/>
 </$tiddler>
 </$list>
-<$list filter="[[$:/core/ui/PageTemplate]!has[page-template]]">
+
+<$list filter="[[$:/appify/ActivePageTemplate]!is[tiddler]]">
 <$transclude tiddler="$:/core/ui/DefaultPageTemplate"/>
 </$list>
 
