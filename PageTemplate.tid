@@ -1,5 +1,5 @@
 created: 20190311204408809
-modified: 20190822055348604
+modified: 20190915075014974
 tags: 
 title: $:/plugins/rimi/appify/PageTemplate
 type: text/vnd.tiddlywiki
@@ -9,6 +9,7 @@ type: text/vnd.tiddlywiki
 <$wikify name="appify.activeAppName" text="""<$importvariables filter="[[$:/plugins/rimi/appify/macros/bootstrap]]"><<activeApp>></$importvariables>""">
 <$wikify name="appify.activeConfig" text="""<$importvariables filter="[[$:/plugins/rimi/appify/macros/bootstrap]]"><<activeAppConfig>></$importvariables>""">
 <$wikify name="appify.activeDataState" text="""<$view tiddler=<<appify.activeConfig>> field="appify.data-state"/>""">
+<$wikify name="appify.firstMenuLevelTag" text="""<$view tiddler=<<appify.activeConfig>> field="appify.first-menu-level-tag"/>""">
 <$wikify name="appify.activeThemeName" text="""<$view tiddler=<<appify.activeConfig>> field="appify.theme"/>""">
 <$wikify name="appify.availableThemes" text="""<$view tiddler=<<appify.activeConfig>> field="appify.theme.available"/>""">
 <$wikify name="appify.activeStyleName" text="""<$view tiddler=<<appify.activeConfig>> field="appify.style"/>""">
@@ -28,6 +29,7 @@ type: text/vnd.tiddlywiki
 </$wikify>
 </$wikify>
 </$set>
+</$wikify>
 </$wikify>
 </$wikify>
 </$wikify>

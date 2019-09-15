@@ -1,5 +1,5 @@
 created: 20190721100439905
-modified: 20190822114321469
+modified: 20190915075000232
 tags: $:/tags/ViewTemplate
 title: $:/plugins/rimi/appify/ui-contrib/ViewTemplate/tagged/appify:config
 type: text/vnd.tiddlywiki
@@ -11,6 +11,7 @@ type: text/vnd.tiddlywiki
 
 <ul>
 <li>Application Prefix: ''{{!!appify.app-prefix}}''</li>
+<li>First Menu Level Tag: ''{{!!appify.first-menu-level-tag}}''</li>
 <li>Theme: <$select field="appify.theme"><$list filter="[enlist{!!appify.theme.available}]"><option value=<<currentTiddler>>><<currentTiddler>></option></$list></$select> (curr: ''{{!!appify.theme}}'')</li>
 <li>Style: <$select field="appify.style"><$list filter="[enlist{!!appify.style.available}]"><option value=<<currentTiddler>>><<currentTiddler>></option></$list></$select> (curr: ''{{!!appify.style}}'')</li>
 <li>Edit-Mode: <$select field="appify.edit-mode"><$list filter="[enlist{!!appify.edit-mode.available}]"><option value=<<currentTiddler>>><<currentTiddler>></option></$list></$select> (curr: ''{{!!appify.edit-mode}}'')</li>
