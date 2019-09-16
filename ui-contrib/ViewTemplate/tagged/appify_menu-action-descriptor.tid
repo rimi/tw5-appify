@@ -1,0 +1,21 @@
+created: 20190916053436757
+modified: 20190916054405172
+tags: $:/tags/ViewTemplate
+title: $:/plugins/rimi/appify/ui-contrib/ViewTemplate/tagged/appify:menu-action-descriptor
+type: text/vnd.tiddlywiki
+
+<$list filter="[is[current]tag[appify:menu-action-descriptor]]">
+
+* ''currentTiddler'' is the element standing for the menu-element
+* The field to be written in data-state when clicking on an element marked with this descriptor: ''{{!!appify.data-state.selection.field-name}}''
+** using the expression: ''<$text text={{!!appify.data-state.selection.field-value}}/>''
+<p/>
+<h2>Appify's "Dyn-Data" is written as follows:</h2>
+<table>
+<$list filter="[is[current]fields[]prefix[appify.dyn-data.selection-value.]]" variable="fieldName">
+<$list filter="[<fieldName>removeprefix[appify.dyn-data.selection-value.]]" variable="sectionName">
+<tr><th><<sectionName>></th><td>{{{[is[current]get<fieldName>]}}}</td></tr>
+</$list>
+</$list>
+</table>
+</$list>
