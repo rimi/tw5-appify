@@ -1,13 +1,14 @@
 caption: Current ENV
 created: 20190721125405068
-modified: 20190915075216525
+modified: 20190915134430142
 tags: 
 title: $:/plugins/rimi/appify/debug/print-env
 type: text/vnd.tiddlywiki
 
 |!Variable|!Value|!Description|
 |appify.activeAppName|<<appify.activeAppName>>|The currently active App|
-|appify.firstMenuLevelTag|<<appify.firstMenuLevelTag>>|The Tag to identify the first-level menu-entries|
+|appify.firstMenuLevelFilter|<<appify.firstMenuLevelFilter>>|The Filter to identify the first-level menu-entries|
+|appify.knownSectionNames|<<appify.knownSectionNames>>|All known Section-Names|
 |appify.activeConfig|<<appify.activeConfig>>|The currently active Configuration|
 |appify.activeDataState|<<appify.activeDataState>>|The currently active Data-State of the App|
 |appify.sectionId|<<appify.sectionId>>|The current sections id|
