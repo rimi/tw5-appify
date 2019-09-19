@@ -1,0 +1,9 @@
+created: 20190919120415131
+modified: 20190919120606018
+tags: 
+title: $:/plugins/rimi/appify/templates/full-dev-edit-template
+type: text/vnd.tiddlywiki
+
+DEV-EDIT-TEMPLATE (NO CUSTOMIZATION YET!!)
+
+<$transclude tiddler="$:/core/ui/EditTemplate"/>
