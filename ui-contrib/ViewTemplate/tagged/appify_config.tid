@@ -1,5 +1,5 @@
 created: 20190721100439905
-modified: 20190915140137714
+modified: 20190925070716617
 tags: $:/tags/ViewTemplate
 title: $:/plugins/rimi/appify/ui-contrib/ViewTemplate/tagged/appify:config
 type: text/vnd.tiddlywiki
@@ -36,7 +36,7 @@ type: text/vnd.tiddlywiki
 <h2>Current Data State (<$link to={{!!appify.data-state}}>Open</$link>):</h2>
 
 <table>
-<$list filter="[{!!appify.data-state}fields[]prefix[appify.data-state.active-selection.]sort[]]" variable="fieldName">
+<$list filter="[{!!appify.data-state}fields[]prefix[appify.selected.]sort[]]" variable="fieldName">
 <tr>
 <th><<fieldName>></th>
 <$list filter="[{!!appify.data-state}get<fieldName>]">
