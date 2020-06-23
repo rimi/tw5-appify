@@ -1,12 +1,8 @@
 created: 20190308171724134
-modified: 20190918110517730
+key: alt-2
+modified: 20200623142434194
+tags: $:/tags/KeyboardShortcut
 title: $:/plugins/rimi/appify/keyboard-shortcuts/enable-appify
 type: text/vnd.tiddlywiki
 
-<$list filter="[[$:/appify/ActivePageTemplate]!is[tiddler]]">
-<$action-setfield $tiddler="$:/appify/ActivePageTemplate" text="""<$tiddler tiddler={{!!page-template}}>
-<$transclude/>
-</$tiddler>"""/>
-</$list>
-
-<$action-setfield $tiddler="$:/appify/ActivePageTemplate" page-template="$:/plugins/rimi/appify/PageTemplate"/>
+<$action-setfield $tiddler="$:/state/rimir/core-hooks/ActivePageTemplate" text="$:/plugins/rimi/appify/PageTemplate"/>
