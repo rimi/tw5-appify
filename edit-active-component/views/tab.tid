@@ -1,7 +1,9 @@
+caption: Tab-Content
 created: 20190722182040272
-modified: 20190722182140170
-tags: 
+modified: 20200623161928535
+tags: $:/plugins/rimi/appify/edit-active-component/views
 title: $:/plugins/rimi/appify/edit-active-component/views/tab
+type: text/vnd.tiddlywiki
 
 <<editTemplateButton "$:/plugins/rimi/appify/edit-active-component/views/tab">>
 

@@ -1,8 +1,0 @@
-created: 20190907163834412
-key: ctrl-2
-modified: 20200623141025238
-tags: $:/tags/KeyboardShortcut
-title: $:/plugins/rimi/appify/keyboard-shortcuts/enable-dev-mode
-type: text/vnd.tiddlywiki
-
-<$action-setfield $tiddler="$:/state/rimi/dev-mode" text="on"/>

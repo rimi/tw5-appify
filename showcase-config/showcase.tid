@@ -10,10 +10,9 @@ appify.style: default
 appify.style.available: default dark
 appify.theme: default
 appify.theme.available: default second
-caption: Showcase-Config
+caption: Appify Showcase-Config
 created: 20190818044956976
-modified: 20190818050808377
-tags: appify:config
+modified: 20200623173140667
+tags: appify:config #wiki/plugins/appify/showcase
 title: $:/appify/apps/showcase
 type: text/vnd.tiddlywiki
-
