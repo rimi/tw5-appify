@@ -1,0 +1,19 @@
+appify.app-prefix: showcase
+appify.dyn-data.content: 
+appify.dyn-data.content.recognized-constants: 
+appify.dyn-data.content.recognized-tags: 
+appify.edit-mode: tm-open-window
+appify.edit-mode.available: tm-open-window tm-modal
+appify.lang: en
+appify.lang.available: de en
+appify.style: default
+appify.style.available: default dark
+appify.theme: default
+appify.theme.available: default second
+caption: Showcase-Config
+created: 20190818044956976
+modified: 20190818050808377
+tags: appify:config
+title: $:/appify/apps/showcase
+type: text/vnd.tiddlywiki
+
