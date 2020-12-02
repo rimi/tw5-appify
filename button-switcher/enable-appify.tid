@@ -1,0 +1,12 @@
+caption: Enable Appify
+created: 20201202084716531
+key: alt-2
+modified: 20201202084748442
+tags: $:/tags/KeyboardShortcut #wiki/plugins/appify/keyboard-shortcuts
+title: $:/plugins/rimi/appify/button-switcher/enable-appify
+type: text/vnd.tiddlywiki
+
+<$button>
+<$action-setfield $tiddler="$:/config/rimir/core-hooks/ActivePageTemplate" text="$:/plugins/rimi/appify/PageTemplate"/>
+ENABLE Appify
+</$button>

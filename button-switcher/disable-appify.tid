@@ -1,0 +1,11 @@
+caption: Button: Disable Appify
+created: 20201202084613520
+modified: 20201202084708576
+tags: $:/tags/KeyboardShortcut #wiki/plugins/appify/keyboard-shortcuts
+title: $:/plugins/rimi/appify/button-switcher/disable-appify
+type: text/vnd.tiddlywiki
+
+<$button>
+<$action-deletetiddler $tiddler="$:/config/rimir/core-hooks/ActivePageTemplate"/>
+DISABLE Appify
+</$button>
