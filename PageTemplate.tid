@@ -1,8 +1,8 @@
-caption: Master Page-Template
+caption: Master Page Renderer
 created: 20190311204408809
-modified: 20200624094405013
-tags: #wiki/plugins/appify/templates
+modified: 20201208082105484
 title: $:/plugins/rimi/appify/PageTemplate
+tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/rendering
 type: text/vnd.tiddlywiki
 
 \import [[$:/plugins/rimi/appify/macros]] [all[shadows+tiddlers]tag[$:/tags/Macro]!has[draft.of]]

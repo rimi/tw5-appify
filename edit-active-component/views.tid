@@ -1,8 +1,8 @@
-caption: Views
+caption: Edit Component-Views
 created: 20190722175716999
-modified: 20200623161353551
-tags: #wiki/plugins/appify/templates/component-editor/parts
+modified: 20201208081145742
 title: $:/plugins/rimi/appify/edit-active-component/views
+tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/editors/component
 type: text/vnd.tiddlywiki
 
 <<editTemplateButton "$:/plugins/rimi/appify/edit-active-component/views">>

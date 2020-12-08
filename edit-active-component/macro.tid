@@ -1,8 +1,8 @@
-caption: Macros
+caption: Edit Component-Macros
 created: 20190310111004851
-modified: 20200623161459777
-tags: #wiki/plugins/appify/templates/component-editor/parts
+modified: 20201208080853054
 title: $:/plugins/rimi/appify/edit-active-component/macro
+tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/editors/component
 type: text/vnd.tiddlywiki
 
 <<editTemplateButton "$:/plugins/rimi/appify/edit-active-component/macro">>

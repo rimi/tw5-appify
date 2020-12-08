@@ -1,0 +1,8 @@
+caption: appificator (appify)
+created: 20201208074243886
+modified: 20201208074413660
+tags: 
+title: #:/wiki/plugins/rimir/appify
+tocp.main-parent.ref: #:/wiki/plugins/rimir
+tocp.treelinker.fields: tocp.appify-plugin-parent.ref
+type: text/vnd.tiddlywiki

@@ -1,6 +1,7 @@
 caption: Global Styles
 created: 20190917055027688
-modified: 20200623155619200
-tags: $:/tags/Stylesheet #wiki/plugins/appify/stylesheets
+modified: 20201208080110932
+tags: $:/tags/Stylesheet
 title: $:/plugins/rimi/appify/global-style
+tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/stylesheets
 type: text/css

@@ -1,8 +1,8 @@
-caption: Current ENV
+caption: Display the current Environment
 created: 20190721125405068
-modified: 20200623161245347
-tags: #wiki/plugins/appify/templates/component-editor/parts
+modified: 20201208080734538
 title: $:/plugins/rimi/appify/debug/print-env
+tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/editors/component
 type: text/vnd.tiddlywiki
 
 |!Variable|!Value|!Description|

@@ -1,8 +1,8 @@
-caption: Styles
+caption: Edit Component-Styles
 created: 20190310110940322
-modified: 20200623161429425
-tags: #wiki/plugins/appify/templates/component-editor/parts
+modified: 20201208081018043
 title: $:/plugins/rimi/appify/edit-active-component/styles
+tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/editors/component
 type: text/vnd.tiddlywiki
 
 <<editTemplateButton "$:/plugins/rimi/appify/edit-active-component/styles">>

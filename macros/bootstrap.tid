@@ -1,8 +1,8 @@
 caption: Bootstrap Macros
 created: 20190315145243786
-modified: 20200623155920825
-tags: #wiki/plugins/appify/macros
+modified: 20201208075754679
 title: $:/plugins/rimi/appify/macros/bootstrap
+tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/macros
 type: text/vnd.tiddlywiki
 
 \define activeApp() {{{[[$:/appify/current-active-app]get[appify.active-app]else[showcase]]}}}

@@ -1,8 +1,8 @@
-caption: Tiddler
+caption: Edit currentTiddler
 created: 20190310120435142
-modified: 20200623171908399
-tags: #wiki/plugins/appify/templates
+modified: 20201208082407281
 title: $:/plugins/rimi/appify/templates/edit-current-tiddler
+tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/utils
 type: text/vnd.tiddlywiki
 
 <$list filter="[<currentTiddler>is[tiddler]]">

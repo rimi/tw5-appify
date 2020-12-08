@@ -12,7 +12,8 @@ appify.theme: default
 appify.theme.available: default second
 caption: Appify Showcase-Config
 created: 20190818044956976
-modified: 20200623173140667
-tags: appify:config #wiki/plugins/appify/showcase
+modified: 20201208075953165
+tags: appify:config
 title: $:/appify/apps/showcase
+tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/showcases
 type: text/vnd.tiddlywiki

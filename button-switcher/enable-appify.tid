@@ -1,9 +1,8 @@
 caption: Button: Enable Appify
 created: 20201202084716531
-key: alt-2
-modified: 20201202085141074
-tags: $:/tags/KeyboardShortcut #wiki/plugins/appify/keyboard-shortcuts
+modified: 20201208074913584
 title: $:/plugins/rimi/appify/button-switcher/enable-appify
+tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/switcher/button
 type: text/vnd.tiddlywiki
 
 <$button>
