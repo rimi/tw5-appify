@@ -12,8 +12,6 @@ LimeViperReader-Navigator widget
 /*global $tw: false */
 "use strict";
 
-var IMPORT_TITLE = "$:/Import";
-
 var Widget = require("$:/core/modules/widgets/widget.js").widget;
 
 var NavigatorWidget = function(parseTreeNode,options) {
@@ -42,11 +40,6 @@ NavigatorWidget.prototype.render = function(parent,nextSibling) {
 Compute the internal state of the widget
 */
 NavigatorWidget.prototype.execute = function() {
-	// Get our parameters
-	this.storyTitle = this.getAttribute("story");
-	this.historyTitle = this.getAttribute("history");
-	this.setVariable("tv-story-list",this.storyTitle);
-	this.setVariable("tv-history-list",this.historyTitle);
 	// Construct the child widgets
 	this.makeChildWidgets();
 };
