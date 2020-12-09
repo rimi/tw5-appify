@@ -1,8 +1,8 @@
 caption: Button: Enable Appify
 created: 20201202084716531
-modified: 20201209190516704
+modified: 20201209192756412
 title: $:/plugins/rimir/appify/button-switcher/enable-appify
-tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/switcher/button
+tocp.appify-plugin-parent.ref: #:/p/appify/#:/switcher/button
 type: text/vnd.tiddlywiki
 
 <$button>

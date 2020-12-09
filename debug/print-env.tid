@@ -1,8 +1,8 @@
 caption: Display the current Environment
 created: 20190721125405068
-modified: 20201209190536989
+modified: 20201209192224199
 title: $:/plugins/rimir/appify/debug/print-env
-tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/editors/component
+tocp.appify-plugin-parent.ref: #:/p/appify/#:/editors/component
 type: text/vnd.tiddlywiki
 
 |!Variable|!Value|!Description|

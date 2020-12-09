@@ -1,8 +1,8 @@
 caption: Editor
 created: 20190309164829460
-modified: 20201209190345516
+modified: 20201209192233358
 title: $:/plugins/rimir/appify/edit-active-component
-tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/editors/component
+tocp.appify-plugin-parent.ref: #:/p/appify/#:/editors/component
 type: text/vnd.tiddlywiki
 
 \import [[$:/plugins/rimir/appify/macros]]

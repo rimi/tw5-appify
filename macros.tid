@@ -1,8 +1,8 @@
 caption: Internal Render Macros
 created: 20190310072223522
-modified: 20201209190837832
+modified: 20201209192402737
 title: $:/plugins/rimir/appify/macros
-tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/macros
+tocp.appify-plugin-parent.ref: #:/p/appify/#:/macros
 type: text/vnd.tiddlywiki
 
 \define appifyTitlesBasePrefix() $:/appify/apps/

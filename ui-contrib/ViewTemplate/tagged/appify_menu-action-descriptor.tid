@@ -1,9 +1,9 @@
 caption: ViewTemplate: Render Menu-Action-Descriptor
 created: 20190916053436757
-modified: 20201209191036720
+modified: 20201209192930564
 tags: $:/tags/ViewTemplate
 title: $:/plugins/rimir/appify/ui-contrib/ViewTemplate/tagged/appify:menu-action-descriptor
-tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/templates
+tocp.appify-plugin-parent.ref: #:/p/appify/#:/templates
 type: text/vnd.tiddlywiki
 
 <$list filter="[is[current]tag[appify:menu-action-descriptor]]">

@@ -1,10 +1,10 @@
 caption: Keyboard: Disable Appify
 created: 20190308172212792
 key: alt-1
-modified: 20201209190759103
+modified: 20201209192821011
 tags: $:/tags/KeyboardShortcut
 title: $:/plugins/rimir/appify/keyboard-shortcuts/disable-appify
-tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/switcher/keyboard
+tocp.appify-plugin-parent.ref: #:/p/appify/#:/switcher/keyboard
 type: text/vnd.tiddlywiki
 
 <$action-deletetiddler $tiddler="$:/config/ActivePageTemplate"/>

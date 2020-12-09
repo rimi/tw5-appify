@@ -1,8 +1,8 @@
 caption: Edit Component-Views
 created: 20190722175716999
-modified: 20201209190709299
+modified: 20201209192256946
 title: $:/plugins/rimir/appify/edit-active-component/views
-tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/editors/component
+tocp.appify-plugin-parent.ref: #:/p/appify/#:/editors/component
 type: text/vnd.tiddlywiki
 
 <<editTemplateButton "$:/plugins/rimir/appify/edit-active-component/views">>

@@ -1,9 +1,9 @@
 caption: ViewTemplate: Render Appify-Config
 created: 20190721100439905
-modified: 20201209191019223
+modified: 20201209192924516
 tags: $:/tags/ViewTemplate
 title: $:/plugins/rimir/appify/ui-contrib/ViewTemplate/tagged/appify:config
-tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/templates
+tocp.appify-plugin-parent.ref: #:/p/appify/#:/templates
 type: text/vnd.tiddlywiki
 
 <$list filter="[is[current]tag[appify:config]]">

@@ -1,8 +1,8 @@
 caption: Button: Disable Appify
 created: 20201202084613520
-modified: 20201209190451247
+modified: 20201209192749490
 title: $:/plugins/rimir/appify/button-switcher/disable-appify
-tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/switcher/button
+tocp.appify-plugin-parent.ref: #:/p/appify/#:/switcher/button
 type: text/vnd.tiddlywiki
 
 <$button>

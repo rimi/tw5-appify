@@ -1,8 +1,8 @@
 caption: Appify-Manager
 created: 20190721094830873
-modified: 20201209190438089
+modified: 20201209192959481
 title: $:/plugins/rimir/appify/application-manager
-tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/utils
+tocp.appify-plugin-parent.ref: #:/p/appify/#:/utils
 type: text/vnd.tiddlywiki
 
 <<editCurrent>>

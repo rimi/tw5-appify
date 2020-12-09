@@ -1,10 +1,10 @@
 caption: Keyboard: Enable Appify
 created: 20190308171724134
 key: alt-2
-modified: 20201209190811961
+modified: 20201209192826564
 tags: $:/tags/KeyboardShortcut
 title: $:/plugins/rimir/appify/keyboard-shortcuts/enable-appify
-tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/switcher/keyboard
+tocp.appify-plugin-parent.ref: #:/p/appify/#:/switcher/keyboard
 type: text/vnd.tiddlywiki
 
 <$action-setfield $tiddler="$:/config/ActivePageTemplate" text="$:/plugins/rimir/appify/PageTemplate"/>

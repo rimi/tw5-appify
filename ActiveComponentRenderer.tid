@@ -1,8 +1,8 @@
 caption: Active-Component Renderer
 created: 20190315165927652
-modified: 20201209190414170
+modified: 20201209192610331
 title: $:/plugins/rimir/appify/ActiveComponentRenderer
-tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/rendering
+tocp.appify-plugin-parent.ref: #:/p/appify/#:/rendering
 type: text/vnd.tiddlywiki
 
 \import [<appify.macroTitle>]
