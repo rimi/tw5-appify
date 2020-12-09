@@ -1,9 +1,9 @@
 caption: Keyboard: Disable Appify
 created: 20190308172212792
 key: alt-1
-modified: 20201209095955077
+modified: 20201209190759103
 tags: $:/tags/KeyboardShortcut
-title: $:/plugins/rimi/appify/keyboard-shortcuts/disable-appify
+title: $:/plugins/rimir/appify/keyboard-shortcuts/disable-appify
 tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/switcher/keyboard
 type: text/vnd.tiddlywiki
 

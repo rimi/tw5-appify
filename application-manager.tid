@@ -1,7 +1,7 @@
 caption: Appify-Manager
 created: 20190721094830873
-modified: 20201208082216827
-title: $:/plugins/rimi/appify/application-manager
+modified: 20201209190438089
+title: $:/plugins/rimir/appify/application-manager
 tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/utils
 type: text/vnd.tiddlywiki
 
@@ -14,7 +14,7 @@ type: text/vnd.tiddlywiki
 Configured Apps:
 
 <$list filter="[tag[appify:config]]">
-<$details summary={{!!caption}}><$link><$view field="caption"><$view field="title"/></$view></$link><br/><$transclude tiddler="$:/plugins/rimi/appify/ui-contrib/ViewTemplate/tagged/appify:config"/></$details>
+<$details summary={{!!caption}}><$link><$view field="caption"><$view field="title"/></$view></$link><br/><$transclude tiddler="$:/plugins/rimir/appify/ui-contrib/ViewTemplate/tagged/appify:config"/></$details>
 </$list>
 
 <$details summary="All fields with prefix 'appify.'">

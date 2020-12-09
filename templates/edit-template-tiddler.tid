@@ -1,10 +1,10 @@
 caption: Edit templateTiddler
 created: 20190320174958533
-modified: 20201208082417904
-title: $:/plugins/rimi/appify/templates/edit-template-tiddler
+modified: 20201209191001019
+title: $:/plugins/rimir/appify/templates/edit-template-tiddler
 tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/utils
 type: text/vnd.tiddlywiki
 
 <$tiddler tiddler=<<templateTiddler>>>
-{{||$:/plugins/rimi/appify/templates/edit-current-tiddler}}
+{{||$:/plugins/rimir/appify/templates/edit-current-tiddler}}
 </$tiddler> 

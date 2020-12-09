@@ -1,7 +1,7 @@
 caption: Appify Navigator-Widget
 created: 20200624085649289
-modified: 20201208084618747
+modified: 20201209191054118
 module-type: widget
-title: $:/plugins/rimi/appify/widgets/navigator
+title: $:/plugins/rimir/appify/widgets/navigator
 tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/navigator
 type: application/javascript

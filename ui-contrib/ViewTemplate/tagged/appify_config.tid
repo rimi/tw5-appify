@@ -1,15 +1,15 @@
 caption: ViewTemplate: Render Appify-Config
 created: 20190721100439905
-modified: 20201208082747693
+modified: 20201209191019223
 tags: $:/tags/ViewTemplate
-title: $:/plugins/rimi/appify/ui-contrib/ViewTemplate/tagged/appify:config
+title: $:/plugins/rimir/appify/ui-contrib/ViewTemplate/tagged/appify:config
 tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/templates
 type: text/vnd.tiddlywiki
 
 <$list filter="[is[current]tag[appify:config]]">
-<<editTemplateButton "$:/plugins/rimi/appify/ui-contrib/ViewTemplate/tagged/appify:app">>
+<<editTemplateButton "$:/plugins/rimir/appify/ui-contrib/ViewTemplate/tagged/appify:app">>
 
-<<dev-edit "$:/plugins/rimi/appify/ui-contrib/ViewTemplate/tagged/appify:config" "Template">>
+<<dev-edit "$:/plugins/rimir/appify/ui-contrib/ViewTemplate/tagged/appify:config" "Template">>
 
 <ul>
 <li>Application Prefix: ''{{!!appify.app-prefix}}''</li>

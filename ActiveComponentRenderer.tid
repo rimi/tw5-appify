@@ -1,7 +1,7 @@
 caption: Active-Component Renderer
 created: 20190315165927652
-modified: 20201208081953092
-title: $:/plugins/rimi/appify/ActiveComponentRenderer
+modified: 20201209190414170
+title: $:/plugins/rimir/appify/ActiveComponentRenderer
 tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/rendering
 type: text/vnd.tiddlywiki
 

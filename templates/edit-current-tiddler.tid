@@ -1,7 +1,7 @@
 caption: Edit currentTiddler
 created: 20190310120435142
-modified: 20201208082407281
-title: $:/plugins/rimi/appify/templates/edit-current-tiddler
+modified: 20201209190945235
+title: $:/plugins/rimir/appify/templates/edit-current-tiddler
 tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/utils
 type: text/vnd.tiddlywiki
 

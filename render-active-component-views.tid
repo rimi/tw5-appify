@@ -1,10 +1,10 @@
 caption: Render Component
 created: 20190722175418092
-modified: 20201208081516254
-title: $:/plugins/rimi/appify/render-active-component-views
+modified: 20201209190932773
+title: $:/plugins/rimir/appify/render-active-component-views
 tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/editors/component
 type: text/vnd.tiddlywiki
 
-<<editTemplateButton "$:/plugins/rimi/appify/render-active-component-view">>
+<<editTemplateButton "$:/plugins/rimir/appify/render-active-component-view">>
 
 <<tabs tabsList:"[enlist<appify.viewTitles>]">>

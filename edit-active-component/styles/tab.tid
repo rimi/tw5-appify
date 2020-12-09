@@ -1,12 +1,12 @@
 caption: Tab-Content
 created: 20190310115853994
-modified: 20201208081048970
-title: $:/plugins/rimi/appify/edit-active-component/styles/tab
-tocp.appify-plugin-parent.ref: $:/plugins/rimi/appify/edit-active-component/styles
+modified: 20201209190657449
+title: $:/plugins/rimir/appify/edit-active-component/styles/tab
+tocp.appify-plugin-parent.ref: $:/plugins/rimir/appify/edit-active-component/styles
 type: text/vnd.tiddlywiki
 
-<<editTemplateButton "$:/plugins/rimi/appify/edit-active-component/styles/tab">>
+<<editTemplateButton "$:/plugins/rimir/appify/edit-active-component/styles/tab">>
 
 <$tiddler tiddler=<<currentTab>>>
-{{||$:/plugins/rimi/appify/templates/edit-current-tiddler}}
+{{||$:/plugins/rimir/appify/templates/edit-current-tiddler}}
 </$tiddler>

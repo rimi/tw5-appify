@@ -1,13 +1,13 @@
 caption: Edit Component-Views
 created: 20190722175716999
-modified: 20201208081145742
-title: $:/plugins/rimi/appify/edit-active-component/views
+modified: 20201209190709299
+title: $:/plugins/rimir/appify/edit-active-component/views
 tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/editors/component
 type: text/vnd.tiddlywiki
 
-<<editTemplateButton "$:/plugins/rimi/appify/edit-active-component/views">>
+<<editTemplateButton "$:/plugins/rimir/appify/edit-active-component/views">>
 Specified tags to be recognized: <<appify.sectionDynDataRecognizedTags>><br/>
 Known constants to be recognized: <<appify.sectionDynDataRecognizedConstants>><br/>
 <$wikify name="availableViews" text=<<calcAllPossibleViewTitles>>>
-<<tabs tabsList:"[enlist<availableViews>][enlist<appify.viewTitles>]" state:"$:/state/appify/component-view-editor-tabs" template:"$:/plugins/rimi/appify/edit-active-component/views/tab">>
+<<tabs tabsList:"[enlist<availableViews>][enlist<appify.viewTitles>]" state:"$:/state/appify/component-view-editor-tabs" template:"$:/plugins/rimir/appify/edit-active-component/views/tab">>
 </$wikify>

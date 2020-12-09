@@ -1,13 +1,13 @@
 caption: Edit Component-Styles
 created: 20190310110940322
-modified: 20201208081018043
-title: $:/plugins/rimi/appify/edit-active-component/styles
+modified: 20201209190607842
+title: $:/plugins/rimir/appify/edit-active-component/styles
 tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/editors/component
 type: text/vnd.tiddlywiki
 
-<<editTemplateButton "$:/plugins/rimi/appify/edit-active-component/styles">>
+<<editTemplateButton "$:/plugins/rimir/appify/edit-active-component/styles">>
 
 <$wikify name="availableStyles" text=<<calcAllPossibleStyleTitles>>>
 
-<<tabs tabsList:"[enlist<availableStyles>]" default:"[enlist<availableStyles>first[]]" state:"$:/state/appify/component-style-editor-tabs" template:"$:/plugins/rimi/appify/edit-active-component/styles/tab">>
+<<tabs tabsList:"[enlist<availableStyles>]" default:"[enlist<availableStyles>first[]]" state:"$:/state/appify/component-style-editor-tabs" template:"$:/plugins/rimir/appify/edit-active-component/styles/tab">>
 </$wikify>

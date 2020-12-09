@@ -1,7 +1,7 @@
 caption: Internal Render Macros
 created: 20190310072223522
-modified: 20201208075641624
-title: $:/plugins/rimi/appify/macros
+modified: 20201209190837832
+title: $:/plugins/rimir/appify/macros
 tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/macros
 type: text/vnd.tiddlywiki
 
@@ -48,7 +48,7 @@ type: text/vnd.tiddlywiki
 <$wikify name="currentTiddler" text=<<sectionViewTitle "$id$">>>
 <$wikify name="appify.styleTitle" text=<<styleTitle>>>
 <$wikify name="appify.macroTitle" text=<<macroTitle>>>
-<div id=<<appify.divId>>><$macrocall $name="editSectionButton" sectionId="$id$"/>{{||$:/plugins/rimi/appify/ActiveComponentRenderer}}</div>
+<div id=<<appify.divId>>><$macrocall $name="editSectionButton" sectionId="$id$"/>{{||$:/plugins/rimir/appify/ActiveComponentRenderer}}</div>
 </$wikify>
 </$wikify>
 </$wikify>
@@ -106,7 +106,7 @@ type: text/vnd.tiddlywiki
 \define editComponentButton()
 <$dev-guard>
 <$button tooltip="Edit Content">
-<$macrocall $name="sendMessageWithFullAppifyEnv" message=<<appify.activeEditMode>> param="$:/plugins/rimi/appify/edit-active-component"/>
+<$macrocall $name="sendMessageWithFullAppifyEnv" message=<<appify.activeEditMode>> param="$:/plugins/rimir/appify/edit-active-component"/>
 {{$:/core/images/options-button}}
 </$button>
 </$dev-guard>
@@ -118,7 +118,7 @@ type: text/vnd.tiddlywiki
 
 <$dev-guard>
 <$button tooltip="$tooltip$">
-<$action-sendmessage $message=<<appify.activeEditMode>> $param="$:/plugins/rimi/appify/templates/edit-template-tiddler" templateTiddler="$templateTiddler$"/>
+<$action-sendmessage $message=<<appify.activeEditMode>> $param="$:/plugins/rimir/appify/templates/edit-template-tiddler" templateTiddler="$templateTiddler$"/>
 {{$:/core/images/storyview-classic}}
 </$button>
 </$dev-guard>
@@ -129,7 +129,7 @@ type: text/vnd.tiddlywiki
 
 <$dev-guard>
 <$button tooltip="$tooltip$">
-<$action-sendmessage $message=<<appify.activeEditMode>> $param="$:/plugins/rimi/appify/templates/edit-template-tiddler" templateTiddler=<<currentTiddler>>/>
+<$action-sendmessage $message=<<appify.activeEditMode>> $param="$:/plugins/rimir/appify/templates/edit-template-tiddler" templateTiddler=<<currentTiddler>>/>
 {{$:/core/images/edit-button}}
 </$button>
 </$dev-guard>
@@ -140,7 +140,7 @@ type: text/vnd.tiddlywiki
 
 <$dev-guard>
 <$button tooltip="Configure Appify">
-<$action-sendmessage $message=<<appify.activeEditMode>>} $param="$:/plugins/rimi/appify/application-manager" appify.activeConfig=<<appify.activeConfig>>/>
+<$action-sendmessage $message=<<appify.activeEditMode>>} $param="$:/plugins/rimir/appify/application-manager" appify.activeConfig=<<appify.activeConfig>>/>
 {{$:/core/images/star-filled}}
 </$button>
 </$dev-guard>

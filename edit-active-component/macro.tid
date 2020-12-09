@@ -1,12 +1,12 @@
 caption: Edit Component-Macros
 created: 20190310111004851
-modified: 20201208080853054
-title: $:/plugins/rimi/appify/edit-active-component/macro
+modified: 20201209190553515
+title: $:/plugins/rimir/appify/edit-active-component/macro
 tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/editors/component
 type: text/vnd.tiddlywiki
 
-<<editTemplateButton "$:/plugins/rimi/appify/edit-active-component/macro">>
+<<editTemplateButton "$:/plugins/rimir/appify/edit-active-component/macro">>
 
 <$tiddler tiddler=<<appify.macroTitle>>>
-{{||$:/plugins/rimi/appify/templates/edit-current-tiddler}}
+{{||$:/plugins/rimir/appify/templates/edit-current-tiddler}}
 </$tiddler>

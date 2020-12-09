@@ -1,15 +1,15 @@
 caption: Master Page Renderer
 created: 20190311204408809
-modified: 20201208082105484
-title: $:/plugins/rimi/appify/PageTemplate
+modified: 20201209190916224
+title: $:/plugins/rimir/appify/PageTemplate
 tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/rendering
 type: text/vnd.tiddlywiki
 
-\import [[$:/plugins/rimi/appify/macros]] [all[shadows+tiddlers]tag[$:/tags/Macro]!has[draft.of]]
+\import [[$:/plugins/rimir/appify/macros]] [all[shadows+tiddlers]tag[$:/tags/Macro]!has[draft.of]]
 
 <$appify-navigator>
-<$wikify name="appify.activeAppName" text="""<$importvariables filter="[[$:/plugins/rimi/appify/macros/bootstrap]]"><<activeApp>></$importvariables>""">
-<$wikify name="appify.activeConfig" text="""<$importvariables filter="[[$:/plugins/rimi/appify/macros/bootstrap]]"><<activeAppConfig>></$importvariables>""">
+<$wikify name="appify.activeAppName" text="""<$importvariables filter="[[$:/plugins/rimir/appify/macros/bootstrap]]"><<activeApp>></$importvariables>""">
+<$wikify name="appify.activeConfig" text="""<$importvariables filter="[[$:/plugins/rimir/appify/macros/bootstrap]]"><<activeAppConfig>></$importvariables>""">
 <$wikify name="appify.activeDataState" text="""<$view tiddler=<<appify.activeConfig>> field="appify.data-state"/>""">
 <$wikify name="appify.knownSectionNames" text="""<$view tiddler=<<appify.activeConfig>> field="appify.known-sections"/>""">
 <$wikify name="appify.firstMenuLevelFilter" text="""<$view tiddler=<<appify.activeConfig>> field="appify.first-menu-level-filter"/>""">
@@ -27,7 +27,7 @@ type: text/vnd.tiddlywiki
 <$wikify name="appify.divId" text="""<<appify.activeAppName>>-wrapper""">
 <$wikify name="appify.viewTitles" text=<<themeViewTitle>>>
 <div id=<<appify.divId>>>
-<<editAppifyConfig>>{{||$:/plugins/rimi/appify/ActiveComponentRenderer}}
+<<editAppifyConfig>>{{||$:/plugins/rimir/appify/ActiveComponentRenderer}}
 </div>
 </$wikify>
 </$wikify>

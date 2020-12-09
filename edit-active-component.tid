@@ -1,13 +1,13 @@
 caption: Editor
 created: 20190309164829460
-modified: 20201208081600490
-title: $:/plugins/rimi/appify/edit-active-component
+modified: 20201209190345516
+title: $:/plugins/rimir/appify/edit-active-component
 tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/editors/component
 type: text/vnd.tiddlywiki
 
-\import [[$:/plugins/rimi/appify/macros]]
+\import [[$:/plugins/rimir/appify/macros]]
 
 <<editCurrentTemplateButton>>
 
 !! Component-Editor
-<<tabs tabsList:"$:/plugins/rimi/appify/debug/print-env $:/plugins/rimi/appify/render-active-component-views $:/plugins/rimi/appify/edit-active-component/views $:/plugins/rimi/appify/edit-active-component/styles $:/plugins/rimi/appify/edit-active-component/macro" default:"$:/plugins/rimi/appify/debug/print-env" state:"$:/state/appify/component-editor-tabs">>
+<<tabs tabsList:"$:/plugins/rimir/appify/debug/print-env $:/plugins/rimir/appify/render-active-component-views $:/plugins/rimir/appify/edit-active-component/views $:/plugins/rimir/appify/edit-active-component/styles $:/plugins/rimir/appify/edit-active-component/macro" default:"$:/plugins/rimir/appify/debug/print-env" state:"$:/state/appify/component-editor-tabs">>
