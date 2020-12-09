@@ -1,11 +1,11 @@
 caption: Button: Disable Appify
 created: 20201202084613520
-modified: 20201208074914988
+modified: 20201209100101278
 title: $:/plugins/rimi/appify/button-switcher/disable-appify
 tocp.appify-plugin-parent.ref: #:/wiki/plugins/rimir/appify/switcher/button
 type: text/vnd.tiddlywiki
 
 <$button>
-<$action-deletetiddler $tiddler="$:/config/rimir/core-hooks/ActivePageTemplate"/>
+<$action-deletetiddler $tiddler="$:/config/ActivePageTemplate"/>
 DISABLE Appify
 </$button>
