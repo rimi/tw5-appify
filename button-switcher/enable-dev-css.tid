@@ -1,0 +1,12 @@
+caption: Button: Enable DEV-CSS
+created: 20201210142014920
+modified: 20201210142243256
+tags: 
+title: $:/plugins/rimir/appify/button-switcher/enable-dev-css
+tocp.appify-plugin-parent.ref: #:/p/appify/#:/switcher/button
+type: text/vnd.tiddlywiki
+
+<$button>
+<$action-setfield $tiddler="dev-css" text=""/>
+ENABLE Dev-CSS
+</$button>

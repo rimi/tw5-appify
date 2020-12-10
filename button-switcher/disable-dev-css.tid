@@ -1,0 +1,13 @@
+caption: Button: Disable DEV-CSS
+created: 20201210142117862
+modified: 20201210142730206
+tags: 
+title: $:/plugins/rimir/appify/button-switcher/disable-dev-css
+tocp.appify-plugin-parent.ref: #:/p/appify/#:/switcher/button
+type: text/vnd.tiddlywiki
+
+<$button>
+<$action-setfield $tiddler="dev-css" text="""\rules only filteredtranscludeinline transcludeinline macrodef macrocallinline html
+//"""/>
+DISABLE Dev-CSS
+</$button>
