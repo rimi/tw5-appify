@@ -1,11 +1,9 @@
-caption: Appify-Manager
+caption: Configuration Info
 created: 20190721094830873
-modified: 20201210110823351
-title: $:/plugins/rimir/appify/application-manager
-tocp.appify-plugin-parent.ref: #:/p/appify/#:/utils
+modified: 20201210121616150
+title: $:/plugins/rimir/appify/administration/configuration-info
+tocp.appify-plugin-parent.ref: #:/p/appify/#:/administration
 type: text/vnd.tiddlywiki
-
-<<editCurrent>>
 
 [[Current active App|$:/appify/current-active-app]]: ''{{$:/appify/current-active-app!!appify.active-app}}''
 

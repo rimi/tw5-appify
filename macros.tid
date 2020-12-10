@@ -1,6 +1,6 @@
 caption: Internal Render Macros
 created: 20190310072223522
-modified: 20201209192402737
+modified: 20201210121653984
 title: $:/plugins/rimir/appify/macros
 tocp.appify-plugin-parent.ref: #:/p/appify/#:/macros
 type: text/vnd.tiddlywiki
@@ -140,7 +140,7 @@ type: text/vnd.tiddlywiki
 
 <$dev-guard>
 <$button tooltip="Configure Appify">
-<$action-sendmessage $message=<<appify.activeEditMode>>} $param="$:/plugins/rimir/appify/application-manager" appify.activeConfig=<<appify.activeConfig>>/>
+<$action-sendmessage $message=<<appify.activeEditMode>>} $param="$:/plugins/rimir/appify/administration/manager" appify.activeConfig=<<appify.activeConfig>>/>
 {{$:/core/images/star-filled}}
 </$button>
 </$dev-guard>
