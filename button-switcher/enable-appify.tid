@@ -1,11 +1,11 @@
 caption: Button: Enable Appify
 created: 20201202084716531
-modified: 20201209192756412
+modified: 20201210131548377
 title: $:/plugins/rimir/appify/button-switcher/enable-appify
 tocp.appify-plugin-parent.ref: #:/p/appify/#:/switcher/button
 type: text/vnd.tiddlywiki
 
 <$button>
-<$action-setfield $tiddler="$:/config/ActivePageTemplate" text="$:/plugins/rimir/appify/PageTemplate"/>
+{{$:/plugins/rimir/appify/keyboard-shortcuts/enable-appify}}
 ENABLE Appify
 </$button>
