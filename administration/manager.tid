@@ -1,9 +1,23 @@
 caption: Manager
 created: 20201210121622445
-modified: 20201210121704778
+modified: 20201210143111350
 tags: 
 title: $:/plugins/rimir/appify/administration/manager
 tocp.appify-plugin-parent.ref: #:/p/appify/#:/administration
 type: text/vnd.tiddlywiki
 
-Manager!
+! Welcome to Appify-Manager!
+
+<$select tiddler="$:/appify/current-active-app" field="appify.active-app">
+<$list filter="[tag[appify:config]]">
+<option value={{!!appify.app-prefix}}><<rimir:name>></option>
+</$list>
+</$select>
+<$list filter="[[$:/config/ActivePageTemplate]!is[tiddler]]">
+{{$:/plugins/rimir/appify/button-switcher/enable-appify}}</$list><$list filter="[[$:/config/ActivePageTemplate]is[tiddler]]">{{$:/plugins/rimir/appify/button-switcher/disable-appify}}</$list>
+<$list filter="[[dev-css]has[text]]">
+{{$:/plugins/rimir/appify/button-switcher/enable-dev-css}}</$list><$list filter="[[dev-css]!has[text]]">{{$:/plugins/rimir/appify/button-switcher/disable-dev-css}}</$list>
+
+{{{[tag[appify:config]appify.app-prefix{$:/appify/current-active-app!!appify.active-app}]}}}
+
+<<tabs tabsList:"$:/plugins/rimir/appify/administration/configuration-info $:/plugins/rimir/appify/administration/current-active-appify-config [tag[appify:config]appify.app-prefix{$:/appify/current-active-app!!appify.active-app}get[appify.manager-contribution.refs]splitter[]]">>

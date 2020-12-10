@@ -1,0 +1,10 @@
+caption: Current Active Appify-Config
+created: 20201210132508826
+modified: 20201210132653260
+tags: 
+title: $:/plugins/rimir/appify/administration/current-active-appify-config
+tocp.appify-plugin-parent.ref: #:/p/appify/#:/administration
+type: text/vnd.tiddlywiki
+
+{{{[tag[appify:config]appify.app-prefix{$:/appify/current-active-app!!appify.active-app}]||$:/plugins/rimir/appify/ui-contrib/ViewTemplate/tagged/appify:config}}}
+
