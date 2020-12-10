@@ -1,0 +1,10 @@
+caption: Open Appify Management Console
+created: 20201210111943556
+key: ((rimir:open-appify-manager))
+modified: 20201210122936396
+tags: $:/tags/KeyboardShortcut
+title: $:/plugins/rimir/appify/keyboard-shortcuts/open-manager
+tocp.appify-plugin-parent.ref: #:/p/appify/#:/keyboard-shortcuts
+type: text/vnd.tiddlywiki
+
+<$action-sendmessage $message="tm-open-window" $param="$:/plugins/rimir/appify/administration/manager"/>

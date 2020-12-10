@@ -1,0 +1,9 @@
+caption: KeyBinding: Open Appify Manager
+created: 20201210113149204
+modified: 20201210123004104
+tags: 
+title: $:/config/shortcuts/rimir:open-appify-manager
+tocp.appify-plugin-parent.ref: $:/plugins/rimir/appify/keyboard-shortcuts/open-manager
+type: text/vnd.tiddlywiki
+
+ctrl-m

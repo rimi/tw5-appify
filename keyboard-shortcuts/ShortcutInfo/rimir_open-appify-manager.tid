@@ -1,0 +1,9 @@
+caption: Info: Open Appify Manager
+created: 20201210113246346
+modified: 20201210113411023
+tags: 
+title: $:/config/ShortcutInfo/rimir:open-appify-manager
+tocp.appify-plugin-parent.ref: $:/plugins/rimir/appify/keyboard-shortcuts/open-manager
+type: text/vnd.tiddlywiki
+
+Opens the Appify-manager in separate Window
