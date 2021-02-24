@@ -1,0 +1,9 @@
+caption: ContentFilter: Full Plugin
+created: 20210224141211342
+modified: 20210224141950792
+tags: rimir:content-filter
+title: $:/plugins/rimir/appify/content-filters/full-plugin
+tocp.appify-plugin-parent.ref: #:/p/appify/#:/content-filters
+type: text/vnd.tiddlywiki
+
+[prefix[$:/plugins/rimir/appify]][[$:/appify/current-active-app]]

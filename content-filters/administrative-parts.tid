@@ -1,0 +1,9 @@
+caption: ContentFilter: Administrative Parts
+created: 20210224143523904
+modified: 20210224143619858
+tags: rimir:content-filter
+title: $:/plugins/rimir/appify/content-filters/administrative-parts
+tocp.appify-plugin-parent.ref: #:/p/appify/#:/content-filters
+type: text/vnd.tiddlywiki
+
+[[$:/plugins/rimir/appify/administration/manager]]
