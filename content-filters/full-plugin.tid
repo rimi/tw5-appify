@@ -1,9 +1,9 @@
 caption: ContentFilter: Full Plugin
 created: 20210224141211342
-modified: 20210224141950792
+modified: 20210225135455882
 tags: rimir:content-filter
 title: $:/plugins/rimir/appify/content-filters/full-plugin
 tocp.appify-plugin-parent.ref: #:/p/appify/#:/content-filters
 type: text/vnd.tiddlywiki
 
-[prefix[$:/plugins/rimir/appify]][[$:/appify/current-active-app]]
+[prefix[$:/plugins/rimir/appify]][[$:/appify/current-active-app]][[$:/config/ActivePageTemplate]][[$:/config/ShortcutInfo/rimir:open-appify-manager]][[$:/config/shortcuts/rimir:open-appify-manager]]
