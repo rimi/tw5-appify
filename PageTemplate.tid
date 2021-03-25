@@ -1,13 +1,12 @@
 caption: Master Page Renderer
 created: 20190311204408809
-modified: 20201209192618791
+modified: 20210224164921989
 title: $:/plugins/rimir/appify/PageTemplate
 tocp.appify-plugin-parent.ref: #:/p/appify/#:/rendering
 type: text/vnd.tiddlywiki
 
 \import [[$:/plugins/rimir/appify/macros]] [all[shadows+tiddlers]tag[$:/tags/Macro]!has[draft.of]]
 
-<$appify-navigator>
 <$wikify name="appify.activeAppName" text="""<$importvariables filter="[[$:/plugins/rimir/appify/macros/bootstrap]]"><<activeApp>></$importvariables>""">
 <$wikify name="appify.activeConfig" text="""<$importvariables filter="[[$:/plugins/rimir/appify/macros/bootstrap]]"><<activeAppConfig>></$importvariables>""">
 <$wikify name="appify.activeDataState" text="""<$view tiddler=<<appify.activeConfig>> field="appify.data-state"/>""">
@@ -47,4 +46,3 @@ type: text/vnd.tiddlywiki
 </$wikify>
 </$wikify>
 </$wikify>
-</$appify-navigator>
