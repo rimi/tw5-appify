@@ -1,9 +1,9 @@
 caption: ContentFilter: Administrative Parts
 created: 20210224143523904
-modified: 20210224143619858
+modified: 20210325121558194
 tags: rimir:content-filter
 title: $:/plugins/rimir/appify/content-filters/administrative-parts
 tocp.appify-plugin-parent.ref: #:/p/appify/#:/content-filters
 type: text/vnd.tiddlywiki
 
-[[$:/plugins/rimir/appify/administration/manager]]
+[[$:/plugins/rimir/appify/administration/manager]][[$:/config/ShortcutInfo/rimir:open-appify-manager]][[$:/config/shortcuts/rimir:open-appify-manager]][[$:/plugins/rimir/appify/keyboard-shortcuts/disable-appify]][[$:/plugins/rimir/appify/keyboard-shortcuts/enable-appify]][[$:/plugins/rimir/appify/button-switcher/disable-appify]][[$:/plugins/rimir/appify/button-switcher/disable-dev-css]][[$:/plugins/rimir/appify/button-switcher/enable-appify]][[$:/plugins/rimir/appify/button-switcher/enable-dev-css]]
